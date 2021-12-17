@@ -3,6 +3,7 @@ import {Route, Switch} from "react-router-dom";
 import Login from "./components/auth/Login";
 import Main from "./pages/Main";
 import Register from "./components/auth/Register";
+import PostWriteForm from "./components/board/PostWriteForm";
 
 function App() {
     return (
@@ -16,6 +17,9 @@ function App() {
                 </Route>
                 <Route path="/register">
                     <Register/>
+                </Route>
+                <Route path="/post-write">
+                    <PostWriteForm/>
                 </Route>
             </Switch>
         </Layout>
