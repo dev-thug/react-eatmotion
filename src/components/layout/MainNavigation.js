@@ -11,17 +11,17 @@ const MainNavigation = () => {
 
 
     return (
-        <nav class="nav_mybar ">
-            <div class="nav_mylogo navbox">
+        <nav className="nav_mybar ">
+            <div className="nav_mylogo navbox">
 
-                <Link class="logo" to="/">Eatmotion</Link>
+                <Link className="logo" to="/">Eatmotion</Link>
             </div>
 
 
             <div id="menu">
                 <li><a href="#">맛집 찾기</a>
                     <ul>
-                        <li><a href="#">카테고리 검색</a></li>
+                        <li><a href="#">항목별 검색</a></li>
                         <li><a href="#">지도에서 보기</a></li>
                     </ul>
                 </li>
