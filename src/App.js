@@ -6,6 +6,8 @@ import Register from "./components/auth/Register";
 import Me from "./pages/user/Me";
 import {useContext} from "react";
 import AuthContext from "./store/auth-context";
+import PostWriteForm from "./components/board/PostWriteForm";
+
 
 function App() {
     const authCtx = useContext(AuthContext);
@@ -28,6 +30,9 @@ function App() {
                 </Route>
                 <Route path="*">
                     <Redirect to="/"/>
+                <Route path="/post-write">
+                    <PostWriteForm/>
+
                 </Route>
             </Switch>
         </Layout>
