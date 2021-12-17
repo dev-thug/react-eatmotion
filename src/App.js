@@ -1,8 +1,8 @@
 import Layout from "./components/layout/Layout";
 import {Route, Switch} from "react-router-dom";
-import Login from "./pages/Login";
+import Login from "./components/auth/Login";
 import Main from "./pages/Main";
-import Register from "./pages/Register";
+import Register from "./components/auth/Register";
 
 function App() {
     return (
