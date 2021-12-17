@@ -21,9 +21,8 @@ const MainNavigation = () => {
             <div id="menu">
                 <li><a href="#">맛집 찾기</a>
                     <ul>
-                        <li><a href="#">지역으로 찾기</a></li>
-                        <li><a href="#">음식으로 찾기</a></li>
-                        <li><a href="#">랭킹으로 찾기</a></li>
+                        <li><a href="#">카테고리 검색</a></li>
+                        <li><a href="#">지도에서 보기</a></li>
                     </ul>
                 </li>
                 {isLoggedIn && (
