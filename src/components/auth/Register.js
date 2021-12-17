@@ -1,4 +1,4 @@
-import "../../pages/Common.css"
+
 import {useRef} from "react";
 import {useHistory} from "react-router-dom";
 

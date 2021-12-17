@@ -1,11 +1,17 @@
 import Layout from "./components/layout/Layout";
-import {Route, Switch} from "react-router-dom";
+import {Redirect, Route, Switch} from "react-router-dom";
 import Login from "./components/auth/Login";
 import Main from "./pages/Main";
 import Register from "./components/auth/Register";
+import Me from "./pages/user/Me";
+import {useContext} from "react";
+import AuthContext from "./store/auth-context";
 import PostWriteForm from "./components/board/PostWriteForm";
 
+
 function App() {
+    const authCtx = useContext(AuthContext);
+
     return (
         <Layout>
             <Switch>
@@ -18,8 +24,15 @@ function App() {
                 <Route path="/register">
                     <Register/>
                 </Route>
+                <Route path="/me">
+                    {authCtx.isLoggedIn && (<Me/>)}
+                    {!authCtx.isLoggedIn && (<Redirect to="/login"/>)}
+                </Route>
+                <Route path="*">
+                    <Redirect to="/"/>
                 <Route path="/post-write">
                     <PostWriteForm/>
+
                 </Route>
             </Switch>
         </Layout>
