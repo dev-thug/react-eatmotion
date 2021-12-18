@@ -1,8 +1,8 @@
-const Search = () => {
+const ShopSearch = () => {
     return(
         <div>
             서치
         </div>
     )
 }
-export default Search;
+export default ShopSearch;

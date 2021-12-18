@@ -8,15 +8,16 @@ const Board = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch("/posts/1?size=10&page=0")
+        fetch("/api/posts/1?size=10&page=0")
             .then(response => {
                 return response.json();
             })
             .then(data => {
 
-
+                console.log(data)
                 setIsLoading(false);
                 setLoadedPosts(data.content);
+                console.log(loadedPosts)
             })
     }, []);
 

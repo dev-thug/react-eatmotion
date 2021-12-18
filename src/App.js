@@ -10,7 +10,7 @@ import Board from "./pages/board/Board";
 import PostWriteForm from "./components/board/PostWriteForm";
 import Shoplist from "./components/shop/Shoplist";
 import Shopinfo from "./components/shop/Shopinfo";
-import Search from ".components/search/Search";
+import ShopSearch from "./components/search/ShopSearch";
 
 
 function App() {
@@ -44,12 +44,12 @@ function App() {
                 <Route path="/Shopinfo">
                     <Shopinfo/>
                 </Route>
-                <Route path="/Search">
-                    <Search/>
+                <Route path="/ShopSearch">
+                    <ShopSearch/>
                 </Route>
                 <Route path="*">
                     <Redirect to="/"/>
-                    </Route>
+                </Route>
 
             </Switch>
         </Layout>
