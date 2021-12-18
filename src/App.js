@@ -8,6 +8,8 @@ import {useContext} from "react";
 import AuthContext from "./store/auth-context";
 import Board from "./pages/board/Board";
 import PostWriteForm from "./components/board/PostWriteForm";
+import Shoplist from "./components/shop/Shoplist";
+import Shopinfo from "./components/shop/Shopinfo";
 
 
 function App() {
@@ -32,16 +34,14 @@ function App() {
                 <Route path="/board">
                     <Board/>
                 </Route>
-<<<<<<< HEAD
-=======
-
-                <Route path="*">
-                    <Redirect to="/"/>
-                </Route>
->>>>>>> 629ad3173a2c677c60408a276f2714b4a0cd0c80
                 <Route path="/post-write">
                     <PostWriteForm/>
-
+                </Route>
+                <Route path="/Shoplist">
+                    <Shoplist/>
+                </Route>
+                <Route path="/Shopinfo">
+                    <Shopinfo/>
                 </Route>
                 <Route path="*">
                     <Redirect to="/"/>

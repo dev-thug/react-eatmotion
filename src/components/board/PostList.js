@@ -5,6 +5,7 @@ const PostList = (props) => {
 
 
     return (
+        <div>
         <ul>
             {props.content.map(post => <PostItem
                 id={post.id}
@@ -14,6 +15,10 @@ const PostList = (props) => {
                 date={post.modifiedDate}
             />)}
         </ul>
+
+        
+
+        </div>
     )
 
     

@@ -13,7 +13,7 @@ const PostWriteForm = () => {
 
             <div className={classes.boardmenu_div}>
                 <div id={classes.boardmenu}>
-                    <a href="#">문의게시판&nbsp;&nbsp;&nbsp;</a>
+                    <a href="/board">문의게시판&nbsp;&nbsp;&nbsp;</a>
                     <a href="#"> 문의하기&nbsp;&nbsp;&nbsp;</a>
                 </div>
             </div>
