@@ -32,6 +32,13 @@ function App() {
                 <Route path="/board">
                     <Board/>
                 </Route>
+<<<<<<< HEAD
+=======
+
+                <Route path="*">
+                    <Redirect to="/"/>
+                </Route>
+>>>>>>> 629ad3173a2c677c60408a276f2714b4a0cd0c80
                 <Route path="/post-write">
                     <PostWriteForm/>
 
