@@ -32,7 +32,7 @@ const Board = () => {
     return (
         <div>
             <h1>Board</h1>
-            <PostList content={loadedPosts}></PostList>
+            <PostList content={loadedPosts}/>
         </div>
     )
 }
