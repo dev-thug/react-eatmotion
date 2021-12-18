@@ -43,6 +43,9 @@ function App() {
                 <Route path="/Shopinfo">
                     <Shopinfo/>
                 </Route>
+                <Route path="/Search">
+                    <Search/>
+                </Route>
                 <Route path="*">
                     <Redirect to="/"/>
                     </Route>
