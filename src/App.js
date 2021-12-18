@@ -32,13 +32,14 @@ function App() {
                 <Route path="/board">
                     <Board/>
                 </Route>
-
-                <Route path="*">
-                    <Redirect to="/"/>
                 <Route path="/post-write">
                     <PostWriteForm/>
 
                 </Route>
+                <Route path="*">
+                    <Redirect to="/"/>
+                    </Route>
+
             </Switch>
         </Layout>
     );

@@ -79,23 +79,23 @@ text-align: center;
   margin-left: 10%;
   margin-right: 10%;
 }
-.table-common>table {
+.tablesection {
 	width: 100%;
 	border-collapse: collapse;
 }
-.table-common>table th, .table-common>table td {
+.tablesection th, .table-common>table td {
 	border: 1px solid white;
 	padding: 10px;
 }
-.board-list table {
+.boardsection {
     border:none;   
     border-top:2px solid #ffcc66;
     border-bottom:2px solid #ffcc66;
 }
-.board-list > table th, .board-list > table td {
+.boardsection > table th, .board-list > table td {
     border:none;
 }
-.board-list > table td {
+.boardsection > table td {
     border-bottom:1px solid lightgray;
 }
 

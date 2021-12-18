@@ -15,6 +15,9 @@ const PostList = (props) => {
             />)}
         </ul>
     )
+
+    
+
 }
 
 export default PostList;
