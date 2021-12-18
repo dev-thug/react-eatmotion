@@ -35,6 +35,7 @@ function App() {
 
                 <Route path="*">
                     <Redirect to="/"/>
+                </Route>
                 <Route path="/post-write">
                     <PostWriteForm/>
 
