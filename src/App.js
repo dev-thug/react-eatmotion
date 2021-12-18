@@ -10,6 +10,7 @@ import Board from "./pages/board/Board";
 import PostWriteForm from "./components/board/PostWriteForm";
 import Shoplist from "./components/shop/Shoplist";
 import Shopinfo from "./components/shop/Shopinfo";
+import Search from ".components/search/Search";
 
 
 function App() {
