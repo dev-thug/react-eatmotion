@@ -36,8 +36,8 @@ const MainNavigation = () => {
                 )}
                 <li><a href="#">고객지원</a>
                     <ul>
-                        <li><Link to="/post-write">문의 하기</Link></li>
-                        <li><a href="/board">문의 게시판</a></li>
+                        <li><Link to="/post-write">문의하기</Link></li>
+                        <li><a href="/board">문의게시판</a></li>
                     </ul>
                 </li>
             </div>

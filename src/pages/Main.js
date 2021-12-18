@@ -32,35 +32,35 @@ return (
 
 			<div className={classes.fixed_img_col}>
 				<ul>
-					<li><a href="#"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
+					<li><a href="/shopinfo"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
 							<strong>와시리</strong>
 					</a>
 						<p>왕십리역</p></li>
-					<li><a href="#"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
+					<li><a href="/shopinfo"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
 							<strong>와시리</strong>
 					</a>
 						<p>왕십리역</p></li>
-					<li><a href="#"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
+					<li><a href="/shopinfo"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
 							<strong>와시리</strong>
 					</a>
 						<p>왕십리역</p></li>
-					<li><a href="#"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
+					<li><a href="/shopinfo"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
 							<strong>와시리</strong>
 					</a>
 						<p>왕십리역</p></li>
-					<li><a href="#"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
+					<li><a href="/shopinfo"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
 							<strong>와시리</strong>
 					</a>
 						<p>왕십리역</p></li>
-					<li><a href="#"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
+					<li><a href="/shopinfo"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
 							<strong>와시리</strong>
 					</a>
 						<p>왕십리역</p></li>
-					<li><a href="#"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
+					<li><a href="/shopinfo"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
 							<strong>와시리</strong>
 					</a>
 						<p>왕십리역</p></li>
-					<li><a href="#"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
+					<li><a href="/shopinfo"> <span className={classes.thumb}> <img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> <em>와시리</em></span>
 							<strong>와시리</strong>
 					</a>
 						<p>왕십리역</p></li>
