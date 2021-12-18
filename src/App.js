@@ -6,6 +6,7 @@ import Register from "./components/auth/Register";
 import Me from "./pages/user/Me";
 import {useContext} from "react";
 import AuthContext from "./store/auth-context";
+import Board from "./pages/board/Board";
 import PostWriteForm from "./components/board/PostWriteForm";
 
 
@@ -28,6 +29,10 @@ function App() {
                     {authCtx.isLoggedIn && (<Me/>)}
                     {!authCtx.isLoggedIn && (<Redirect to="/login"/>)}
                 </Route>
+                <Route path="/board">
+                    <Board/>
+                </Route>
+
                 <Route path="*">
                     <Redirect to="/"/>
                 <Route path="/post-write">
