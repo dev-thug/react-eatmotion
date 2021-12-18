@@ -8,9 +8,10 @@ import {useContext} from "react";
 import AuthContext from "./store/auth-context";
 import Board from "./pages/board/Board";
 import PostWriteForm from "./components/board/PostWriteForm";
-import Shoplist from "./components/shop/Shoplist";
-import Shopinfo from "./components/shop/Shopinfo";
+import ShopList from "./components/shop/ShopList";
+import ShopInfo from "./components/shop/ShopInfo";
 import ShopSearch from "./components/search/ShopSearch";
+import Shop from "./pages/shop/Shop";
 
 
 function App() {
@@ -38,13 +39,16 @@ function App() {
                 <Route path="/post-write">
                     <PostWriteForm/>
                 </Route>
-                <Route path="/Shoplist">
-                    <Shoplist/>
+                <Route path="/shop">
+                    <Shop/>
                 </Route>
-                <Route path="/Shopinfo">
-                    <Shopinfo/>
+                <Route path="/shoplist">
+                    <ShopList/>
                 </Route>
-                <Route path="/ShopSearch">
+                <Route path="/shopinfo">
+                    <ShopInfo/>
+                </Route>
+                <Route path="/shop-search">
                     <ShopSearch/>
                 </Route>
                 <Route path="*">

@@ -1,12 +1,11 @@
 import PostItem from "./PostItem";
 
 const PostList = (props) => {
-
-
     return (
         <div>
             <ul>
-                {props.content.map(post => <PostItem
+                {props.content.map(post =>
+                    <PostItem
                     id={post.id}
                     title={post.title}
                     content={post.content}
