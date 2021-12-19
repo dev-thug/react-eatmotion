@@ -1,7 +1,7 @@
-import "./Common.css"
 import {Link} from "react-router-dom";
 import {useContext} from "react";
 import AuthContext from "../../store/auth-context";
+import classes from "./UserInterface.module.css";
 
 const UserInterface = () => {
     const authCtx = useContext(AuthContext);
@@ -14,19 +14,18 @@ const UserInterface = () => {
 
 
     return (
-        <div class="wrap">
-            <div class="login_top_div">
-                <div class="login_top">
-                    {!isLoggedIn && (
-                        <Link class="button" to="/login" id="loginBtn">로그인</Link>
-                    )}
-                    {isLoggedIn && (
-                        <a class="button" id="loginBtn" onClick={logoutHandler}>로그아웃</a>
-                    )}
-                </div>
 
-            </div>
+
+        <div className={classes.left}>
+            {!isLoggedIn && (
+                <Link to="/login"><p>로그인</p></Link>
+            )}
+            {isLoggedIn && (
+                <a onClick={logoutHandler}><p>로그아웃</p></a>
+            )}
         </div>
+
+
     )
 }
 
