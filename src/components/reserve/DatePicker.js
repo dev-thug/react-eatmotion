@@ -15,7 +15,7 @@ function ReserveDatePicker() {
             onChange={(date) => setStartDate(date)}
             showTimeSelect
             timeFormat="HH:mm"
-            timeIntervals={15}
+            timeIntervals={30}
             minDate={new Date()}
             timeCaption="time"
             dateFormat="Pp"
