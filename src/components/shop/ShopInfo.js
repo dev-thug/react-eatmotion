@@ -9,6 +9,9 @@ const ShopInfo = (props) => {
             <strong>와시리</strong>
         </a>
             <p>2021-12-25</p>
+
+            <a href="/reserve-make">예약하기(임시용)&nbsp;&nbsp;&nbsp;</a>
+
         </li>
         // <div className={classes.body_shopInfo}>
         //

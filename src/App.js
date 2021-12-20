@@ -12,13 +12,13 @@ import ShopList from "./components/shop/ShopList";
 import ShopInfo from "./components/shop/ShopInfo";
 import ShopSearch from "./components/search/ShopSearch";
 import Shop from "./pages/shop/Shop";
+import MakeReserve from "./components/reserve/makeReserve";
 
 
 function App() {
     const authCtx = useContext(AuthContext);
 
-    return (
-        <Layout>
+    return (        <Layout>
             <Switch>
                 <Route path="/" exact>
                     <Main/>
@@ -51,10 +51,15 @@ function App() {
                 <Route path="/shop-search">
                     <ShopSearch/>
                 </Route>
+                <Route path="/reserve-make">
+                    <MakeReserve />
+                </Route>
+                <Route path="/reserve-list">
+
+                </Route>
                 <Route path="*">
                     <Redirect to="/"/>
                 </Route>
-
             </Switch>
         </Layout>
     );
