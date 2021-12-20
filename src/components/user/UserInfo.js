@@ -31,7 +31,7 @@ const UserInfo = (props) => {
                   <h5 className="title" style={{ textAlign: "center" }}>
                     회원 정보
                   </h5>
-                </Col>
+                </Col>{" "}
               </Row>
             </CardHeader>
             <CardBody>
@@ -45,7 +45,11 @@ const UserInfo = (props) => {
                         defaultValue={props.info.email}
                         disabled
                         type="text"
-                        style={{ backgroundColor: "white" , fontWeight: "bold" , color:"black"}}
+                        style={{
+                          backgroundColor: "white",
+                          fontWeight: "bold",
+                          color: "black",
+                        }}
                       />
                     </FormGroup>
                   </Col>
@@ -59,7 +63,11 @@ const UserInfo = (props) => {
                         defaultValue={props.info.name}
                         disabled
                         type="text"
-                        style={{ backgroundColor: "white" , fontWeight: "bold" , color:"black"}}
+                        style={{
+                          backgroundColor: "white",
+                          fontWeight: "bold",
+                          color: "black",
+                        }}
                       />
                       <br></br>
                     </FormGroup>
