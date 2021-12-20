@@ -1,4 +1,4 @@
-import classes from "./ShopInfo.module.css";
+import classes from "./Shop.module.css";
 
 const ShopInfo = (props) => {
     return (

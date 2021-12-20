@@ -16,7 +16,7 @@ const Shop = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch("/api/shop/gps?userX="+longitude+"&userY="+latitude+"&distance=5")
+        fetch("https://hayagou.shop/api/shop/gps?userX="+longitude+"&userY="+latitude+"&distance=5")
             .then(response => {
                 return response.json();
             })
