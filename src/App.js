@@ -51,8 +51,11 @@ function App() {
                 <Route path="/shop-search">
                     <ShopSearch/>
                 </Route>
-                <Route path="/make-reserve">
+                <Route path="/reserve-make">
                     <MakeReserve />
+                </Route>
+                <Route path="/reserve-list">
+
                 </Route>
                 <Route path="*">
                     <Redirect to="/"/>
