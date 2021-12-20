@@ -2,6 +2,19 @@ import {useContext, useEffect, useState} from "react";
 import AuthContext from "../../store/auth-context";
 import UserInfo from "../../components/user/UserInfo";
 
+// reactstrap components
+import {
+    Button,
+    Card,
+    CardHeader,
+    CardBody,
+    FormGroup,
+    Form,
+    Input,
+    Row,
+    Col,
+  } from "reactstrap";
+
 
 const Me = () => {
     const authCtx = useContext(AuthContext);

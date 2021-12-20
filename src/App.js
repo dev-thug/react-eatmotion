@@ -15,13 +15,14 @@ import Shop from "./pages/shop/Shop";
 import NewPost from "./pages/board/NewPost";
 import PostItem from "./components/board/PostItem";
 import Post from "./pages/board/Post";
+import MakeReserve from "./components/reserve/makeReserve";
+
 
 
 function App() {
     const authCtx = useContext(AuthContext);
 
-    return (
-        <Layout>
+    return (        <Layout>
             <Switch>
                 <Route path="/" exact>
                     <Main/>
@@ -48,11 +49,15 @@ function App() {
                 <Route path="/post/:id" component={Post}>
 
                 </Route>
+                <Route path="/reserve-make">
+                    <MakeReserve />
+                </Route>
+                <Route path="/reserve-list">
 
+                </Route>
                 <Route path="*">
                     <Redirect to="/"/>
                 </Route>
-
             </Switch>
         </Layout>
     );
