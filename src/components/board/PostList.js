@@ -1,4 +1,5 @@
 import PostItem from "./PostItem";
+import {Link} from "react-router-dom";
 
 const PostList = (props) => {
     return (
@@ -11,7 +12,9 @@ const PostList = (props) => {
                     content={post.content}
                     writer={post.writer}
                     date={post.modifiedDate}
-                />)}
+                />
+                )}
+
             </ul>
         </div>
     )
