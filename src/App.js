@@ -49,12 +49,12 @@ function App() {
                 <Route path="/post/:id" component={Post}>
 
                 </Route>
-                <Route path="/reserve-make">
-                    <MakeReserve />
-                </Route>
-                <Route path="/reserve-list">
+                {/*<Route path="/reserve-make">*/}
+                {/*    <MakeReserve />*/}
+                {/*</Route>*/}
+                {/*<Route path="/reserve-list">*/}
 
-                </Route>
+                {/*</Route>*/}
                 <Route path="*">
                     <Redirect to="/"/>
                 </Route>
