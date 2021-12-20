@@ -45,7 +45,7 @@ const UserInfo = (props) => {
                         defaultValue={props.info.email}
                         disabled
                         type="text"
-                        style={{ backgroundColor: "white" }}
+                        style={{ backgroundColor: "white" , fontWeight: "bold" , color:"black"}}
                       />
                     </FormGroup>
                   </Col>
@@ -59,7 +59,7 @@ const UserInfo = (props) => {
                         defaultValue={props.info.name}
                         disabled
                         type="text"
-                        style={{ backgroundColor: "white" }}
+                        style={{ backgroundColor: "white" , fontWeight: "bold" , color:"black"}}
                       />
                       <br></br>
                     </FormGroup>
