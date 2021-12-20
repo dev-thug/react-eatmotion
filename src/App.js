@@ -9,7 +9,6 @@ import AuthContext from "./store/auth-context";
 import Board from "./pages/board/Board";
 import PostWriteForm from "./components/board/PostWriteForm";
 import ShopList from "./components/shop/ShopList";
-import ShopInfo from "./components/shop/ShopInfo";
 import ShopSearch from "./components/search/ShopSearch";
 import Shop from "./pages/shop/Shop";
 import NewPost from "./pages/board/NewPost";
