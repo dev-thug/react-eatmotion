@@ -4,26 +4,31 @@ import ShopItem from "./ShopItem";
 
 const DUMMY_DATA = [
     {
+        id: 1,
         name: "와시리",
         src: "../img/shopinfo1.jpg",
         date: "2021-12-25"
     },
     {
+        id: 2,
         name: "adsfasdf",
         src: "../img/shopinfo1.jpg",
         date: "2021-12-25"
     },
     {
+        id: 3,
         name: "sadfdf",
         src: "../img/shopinfo1.jpg",
         date: "2asdfasd2-25"
     },
     {
+        id: 4,
         name: "와시asdfasdf3",
         src: "../img/shopinfo1.jpg",
         date: "2021-12-25"
     },
     {
+        id: 5,
         name: "asdfasdfasdf",
         src: "../img/shopinfo1.jpg",
         date: "2021-12-25"
@@ -33,77 +38,25 @@ const DUMMY_DATA = [
 
 const ShopList = (props) => {
     return (
-
-        <div className={classes.shoplist_div}>
-            <div id="content">
-                <div className={classes.fixed_img_col}>
+                <div>
                     <ul>
-                        {DUMMY_DATA.map(info =>
+                        {props.shops.map(shop =>
                             <ShopItem
-                                name={info.name}
-                                src={info.src}
-                                date={info.date}
+                                key={shop.id}
+                                id={shop.id}
+                                name={shop.name}
+                                address={shop.address}
 
                             />)}
 
-                        {/*<li><a href="/shopinfo">*/}
-                        {/*<span className={classes.thumb}> */}
-                        {/*<img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> */}
-                        {/*<em>와시리</em></span>*/}
-                        {/*    <strong>와시리</strong>*/}
-                        {/*</a>*/}
-                        {/*    <p>2021-12-25</p></li>*/}
-                        {/*<li><a href="/shopinfo">*/}
-                        {/*<span className={classes.thumb}> */}
-                        {/*<img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> */}
-                        {/*<em>와시리</em></span>*/}
-                        {/*    <strong>와시리</strong>*/}
-                        {/*</a>*/}
-                        {/*    <p>2021-12-25</p></li>*/}
-                        {/*<li><a href="/shopinfo">*/}
-                        {/*<span className={classes.thumb}> */}
-                        {/*<img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> */}
-                        {/*<em>와시리</em></span>*/}
-                        {/*    <strong>와시리</strong>*/}
-                        {/*</a>*/}
-                        {/*    <p>2021-12-25</p></li>*/}
-                        {/*<li><a href="/shopinfo">*/}
-                        {/*<span className={classes.thumb}> */}
-                        {/*<img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> */}
-                        {/*<em>와시리</em></span>*/}
-                        {/*    <strong>와시리</strong>*/}
-                        {/*</a>*/}
-                        {/*    <p>2021-12-25</p></li>*/}
-                        {/*<li><a href="/shopinfo">*/}
-                        {/*<span className={classes.thumb}> */}
-                        {/*<img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> */}
-                        {/*<em>와시리</em></span>*/}
-                        {/*    <strong>와시리</strong>*/}
-                        {/*</a>*/}
-                        {/*    <p>2021-12-25</p></li>*/}
-                        {/*<li><a href="/shopinfo">*/}
-                        {/*<span className={classes.thumb}> */}
-                        {/*<img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> */}
-                        {/*<em>와시리</em></span>*/}
-                        {/*    <strong>와시리</strong>*/}
-                        {/*</a>*/}
-                        {/*    <p>2021-12-25</p></li>*/}
-                        {/*<li><a href="/shopinfo">*/}
-                        {/*<span className={classes.thumb}> */}
-                        {/*<img src="../img/shopinfo1.jpg" alt="shopinfo.html"/> */}
-                        {/*<em>와시리</em></span>*/}
-                        {/*    <strong>와시리</strong>*/}
-                        {/*</a>*/}
-                        {/*    <p>2021-12-25</p></li>*/}
 
                     </ul>
 
-                    <p className={classes.paragraph}>페이지</p>
+                    <p >페이지</p>
                 </div>
 
 
-            </div>
-        </div>
+
 
     )
 }

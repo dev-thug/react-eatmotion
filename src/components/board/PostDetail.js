@@ -1,8 +1,4 @@
-import {Link} from "react-router-dom";
-
-const PostItem = (props) => {
-
-    const detail = "/post/"+props.id
+const PostDetail = (props) => {
 
     return (
         <div>
@@ -11,9 +7,9 @@ const PostItem = (props) => {
             <p>작성자 : {props.writer}</p>
             <p>날짜 : {props.date}</p>
             <br/>
-            <Link to={detail}>상세 조회</Link>
+
         </div>
     )
 }
 
-export default PostItem;
+export default PostDetail;
