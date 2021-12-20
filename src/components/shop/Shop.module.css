@@ -1,0 +1,9 @@
+
+.shop-list{
+    padding: 5%;
+    overflow: scroll;
+}
+
+.shop-item:hover{
+    background-color:whitesmoke;
+}
