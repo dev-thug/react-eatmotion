@@ -9,66 +9,70 @@ import {
   Input,
   Row,
   Col,
-} from "reactstrap";        
-        
-        // <ul>
-        //     <h1>회원 정보</h1>
-        //     <li>{props.info.id}</li>
-        //     <li>{props.info.name}</li>
-        //     <li>{props.info.email}</li>
-        // </ul>
-const UserInfo = (props) => {
+} from "reactstrap";
 
-    return (
-        <div className="content">
-        <Row>
-          <Col md="8">
-            <Card>
-              <CardHeader>
-                <h5 className="title">회원 정보</h5>
-              </CardHeader>
-              <CardBody>
-                <Form>
-                  <Row>
-                    <Col className="px-1" md="4">
-                      <FormGroup>
-                        <label>Username</label>
-                        <Input
-                          defaultValue="michael23"
-                          placeholder="Username"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                    <Col className="pl-1" md="4">
-                      <FormGroup>
-                        <label htmlFor="exampleInputEmail1">
-                          Email address
-                        </label>
-                        <Input placeholder="Email" type="email" />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col className="pr-1" md="6">
-                      <FormGroup>
-                        <label>First Name</label>
-                        <Input
-                          defaultValue="Mike"
-                          placeholder="Company"
-                          type="text"
-                        />
-                      </FormGroup>
-                    </Col>
-                  </Row>
-                </Form>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-      </div>
-    )
-}
+// 회원정보 info.id, info.name, info.email
+// <ul>
+//     <h1>회원 정보</h1>
+//     <li>{props.info.id}</li>
+//     <li>{props.info.name}</li>
+//     <li>{props.info.email}</li>
+// </ul>
+
+const UserInfo = (props) => {
+  return (
+    <div className="content" style={{ width: "30%", margin: "10% auto" }}>
+      <Row>
+        <Col md="12">
+          <Card>
+            <CardHeader>
+              <Row>
+                <Col md="12">
+                  <h5 className="title" style={{ textAlign: "center" }}>
+                    회원 정보
+                  </h5>
+                </Col>
+              </Row>
+            </CardHeader>
+            <CardBody>
+              <Form>
+                <Row>
+                  <Col md="1"></Col>
+                  <Col className="pr-1" md="10">
+                    <FormGroup>
+                      <label>E-mail</label>
+                      <Input
+                        defaultValue={props.info.email}
+                        disabled
+                        type="text"
+                        style={{ backgroundColor: "white" }}
+                      />
+                    </FormGroup>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col md="1"></Col>
+                  <Col className="pr-1" md="10">
+                    <FormGroup>
+                      <label>이름 :</label>
+                      <Input
+                        defaultValue={props.info.name}
+                        disabled
+                        type="text"
+                        style={{ backgroundColor: "white" }}
+                      />
+                      <br></br>
+                    </FormGroup>
+                  </Col>
+                </Row>
+              </Form>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+    </div>
+  );
+};
 
 export default UserInfo;
 
