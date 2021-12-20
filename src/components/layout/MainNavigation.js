@@ -10,7 +10,6 @@ const MainNavigation = () => {
 
     const isLoggedIn = authCtx.isLoggedIn;
 
-
     return (
 
 
@@ -21,12 +20,12 @@ const MainNavigation = () => {
             <nav className={classes.menu}>
                 <ul>
                     <li>
-                        <a href="#">맞집 찾기</a>
-                        <ul>
-                            <li><a href="#">주변 맛집</a></li>
-                            <li><a href="#">지도 찾기</a></li>
+                        <Link to="/shop">맞집 찾기</Link>
+                        {/*<ul>*/}
+                        {/*    <li><a href="#">주변 맛집</a></li>*/}
+                        {/*    <li><a href="#">지도 찾기</a></li>*/}
 
-                        </ul>
+                        {/*</ul>*/}
                     </li>
                     <li>
                         <a href="#">고객 문의</a>

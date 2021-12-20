@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import PostList from "../../components/board/PostList";
+import {Link} from "react-router-dom";
 
 
 const Board = () => {
@@ -34,6 +35,7 @@ const Board = () => {
         <div>
             <h1>Board</h1>
             <PostList content={loadedPosts}/>
+            <Link to="post-write">글쓰기</Link>
         </div>
     )
 }

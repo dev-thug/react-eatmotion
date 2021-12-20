@@ -12,6 +12,9 @@ import ShopList from "./components/shop/ShopList";
 import ShopInfo from "./components/shop/ShopInfo";
 import ShopSearch from "./components/search/ShopSearch";
 import Shop from "./pages/shop/Shop";
+import NewPost from "./pages/board/NewPost";
+import PostItem from "./components/board/PostItem";
+import Post from "./pages/board/Post";
 
 
 function App() {
@@ -37,20 +40,15 @@ function App() {
                     <Board/>
                 </Route>
                 <Route path="/post-write">
-                    <PostWriteForm/>
+                    <NewPost/>
                 </Route>
                 <Route path="/shop">
                     <Shop/>
                 </Route>
-                <Route path="/shoplist">
-                    <ShopList/>
+                <Route path="/post/:id" component={Post}>
+
                 </Route>
-                <Route path="/shopinfo">
-                    <ShopInfo/>
-                </Route>
-                <Route path="/shop-search">
-                    <ShopSearch/>
-                </Route>
+
                 <Route path="*">
                     <Redirect to="/"/>
                 </Route>
