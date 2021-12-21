@@ -29,7 +29,7 @@ const Shop = () => {
   useEffect(() => {
     setIsLoading(true);
     fetch(
-      "https://hayagou.shop/api/shop/gps?userX=" +
+      "/api/shop/gps?userX=" +
         longitude +
         "&userY=" +
         latitude +

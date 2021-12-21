@@ -11,7 +11,7 @@ const NewPost = () => {
     const addPostHandler = (post) => {
 
         fetch(
-            "https://hayagou.shop/api/post/1",
+            "/api/post/1",
             {
                 method: "POST",
                 body: JSON.stringify(post),
