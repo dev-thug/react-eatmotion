@@ -40,7 +40,7 @@ const MainNavigation = () => {
                         <a href="#">내 정보</a>
                         <ul>
                             <li><Link to="/me">회원 정보</Link></li>
-                            <li><a href="#">다녀간 음식점</a></li>
+                            <li><Link to="/reserve">다녀간 음식점</Link></li>
                             <li><a href="#">남긴 리뷰</a></li>
 
                         </ul>
