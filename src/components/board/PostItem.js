@@ -1,17 +1,17 @@
 import {Link} from "react-router-dom";
+import classes from "./PostItem.module.css"
 
 const PostItem = (props) => {
 
     const detail = "/post/"+props.id
 
     return (
-        <div>
-            <p>제목 : {props.title}</p>
-            <p>내용 : {props.content}</p>
+        <div className={classes.boardview}>
+            <h3>{props.title}</h3>
             <p>작성자 : {props.writer}</p>
-            <p>날짜 : {props.date}</p>
             <br/>
             <Link to={detail}>상세 조회</Link>
+            <br/>
         </div>
     )
 }

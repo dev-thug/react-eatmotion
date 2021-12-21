@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+
+
+.divEntire{
+    display: flex;
+    margin-top: 5%;
+    padding: 20px;
+    justify-content: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 15px;
+}
+
+.formEntire{
+    width: 80%;
+}
+
+.divGroup{
+    width:100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #f8ecda;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.input{
+    width:100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    display: inline-block;
+    border: 1px solid #FFCC66;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.btn{
+    width: 100%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    background-color: #FFCC66;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
+    color: #F96332;
+    font-weight: bold;
+}
+
+.smallLabel{
+    font-size: 5px;
+    color: #c93200;
+}

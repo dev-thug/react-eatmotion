@@ -27,7 +27,6 @@ const NewPost = () => {
 
     return (
         <section>
-            <h1>문의 하기</h1>
             <NewPostForm onAddPost={addPostHandler}/>
         </section>
     )

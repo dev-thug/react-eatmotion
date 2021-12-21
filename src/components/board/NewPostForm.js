@@ -1,4 +1,5 @@
 import {useRef} from "react";
+import classes from './NewPostForm.module.css';
 
 const NewPostForm = (props) => {
 
@@ -24,18 +25,20 @@ const NewPostForm = (props) => {
     }
 
     return (
-        <div>
+        <div className={classes.divEntire}>
             <form onSubmit={submitHandler}>
                 <div>
-                    <label htmlFor="title">Title</label>
-                    <input type="text" required id="title" ref={titleInputRef}/>
+                    <label className={classes.font} htmlFor="title">제목</label>
+                    <br/>
+                    <input className={classes.input} type="text" required id="title" ref={titleInputRef}  placeholder="제목을 작성해주세요"/>
                 </div>
                 <div>
-                    <label htmlFor="content">content</label>
-                    <textarea required id="content" rows="5" ref={contentInputRef}/>
+                    <label className={classes.font} htmlFor="content" >내용</label>
+                    <br/>
+                    <textarea className={classes.input} required id="content" rows="10" ref={contentInputRef}  placeholder="내용을 작성해주세요"/>
                 </div>
                 <div>
-                    <button>문의 하기</button>
+                    <button className={classes.btn}>문의 하기</button>
                 </div>
             </form>
         </div>
