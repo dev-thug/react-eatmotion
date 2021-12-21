@@ -6,6 +6,32 @@ import AuthContext from "../../store/auth-context";
 
 const NewReserve = ({match}) => {
 
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadedShop, setLoadedShop] = useState("");
+
+    
+    
+    // 음식점 조회 시작 부분
+    useEffect(() => {
+        setIsLoading(true);
+        fetch(`/api/reserve/${match.params.id}`,
+            {
+                
+            }
+            )
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+
+                setIsLoading(false);
+                setLoadedShop(data);
+                console.log(loadedShop)
+            })
+    }, []);
+
+    
+    // 예약 핸들러 시작부분
     const authCtx = useContext(AuthContext);
 
     const timeInputRef = useRef();
@@ -41,6 +67,13 @@ const NewReserve = ({match}) => {
             })
     }
 
+    if (isLoading) {
+        return (
+            <section>
+                <p>Loading...</p>
+            </section>
+        )
+    }
 
     return (
         <div className={classes.divEntire}>
@@ -57,7 +90,7 @@ const NewReserve = ({match}) => {
                 <div className={classes.divGroup}>
                     <label htmlFor="exampleSelect1" className="form-label mt-4">예약 인원수</label>
                     <br/>
-                    <select className={classes.input} id="exampleSelect1" ref={peopleInputRef}>
+                    <select className={classes.input} id="exampleSelect1">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
