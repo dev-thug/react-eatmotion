@@ -11,7 +11,7 @@ const Post = ({match}) => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch(`/api/post/${match.params.id}`)
+        fetch(`https://hayagou.shop/api/post/${match.params.id}`)
             .then(response => {
                 return response.json();
             })

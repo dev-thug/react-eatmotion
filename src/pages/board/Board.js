@@ -9,7 +9,7 @@ const Board = () => {
 
     useEffect(() => {
         setIsLoading(true);
-        fetch("/api/posts/1?size=10&page=0")
+        fetch("https://hayagou.shop/api/posts/1?size=10&page=0")
             .then(response => {
                 return response.json();
             })
