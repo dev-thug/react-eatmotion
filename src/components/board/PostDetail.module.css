@@ -1,0 +1,23 @@
+.postmargin{
+    border-top: 50px solid #fff;
+    border-left: 100px solid #fff;
+    border-right: 100px solid #fff;
+    background-color: #fff;
+    width:80%;
+    height:800px;
+    margin-top: 5%;
+    margin-left: 10% ;
+    margin-right: 10%;
+}
+.posttitle{
+    border-bottom:3px solid #ffcc66;
+}
+.postwriter{
+    float: inline;
+}
+.postcontent{
+    border-top:3px solid #ffcc66;
+    padding-top:5px;
+}
+
+

@@ -1,11 +1,15 @@
+import classes from "./PostDetail.module.css"
+
 const PostDetail = (props) => {
 
     return (
-        <div>
-            <p>제목 : {props.title}</p>
-            <p>내용 : {props.content}</p>
-            <p>작성자 : {props.writer}</p>
-            <p>날짜 : {props.date}</p>
+        <div className={classes.postmargin}>
+            <h1 className={classes.posttitle}>{props.title}</h1>
+            <p className={classes.postwriter}>작성자 : {props.writer}
+            &emsp;&emsp;&emsp;&emsp;&emsp;
+            날짜 : {props.date}</p>
+            <p className={classes.postcontent}>{props.content}</p>
+            
             <br/>
 
         </div>
