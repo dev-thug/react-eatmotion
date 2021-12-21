@@ -6,7 +6,7 @@ function StoreOverView() {
             <h3 className="card-header">와시리</h3>
             <div className="card-body">
                 {/* 이미지 크기 줄여야 함*/}
-                <img src="../../img/shopinfo1.jpg" alt="shopinfo"/>
+                <img src="" alt="shopinfo"/>
             </div>
             <ul className="list-group list-group-flush">
                 <li className="list-group-item">왕십리 어딘가</li>

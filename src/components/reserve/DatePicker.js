@@ -2,14 +2,15 @@ import React, {useState} from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"
 import { ko } from "date-fns/esm/locale";
+import classes from './ReserveForm.module.css';
 
 function ReserveDatePicker() {
 
-    const [startDate, setStartDate] = useState(new Date());
+    const [startDate, setStartDate] = useState();
 
     return (
         <DatePicker
-            className="react-datepicker__year"
+            className={classes.input}
             locale={ko}
             selected={startDate}
             onChange={(date) => setStartDate(date)}
