@@ -9,6 +9,8 @@ import {
     Row,
     Col,
 } from "reactstrap";
+import ShopMap from "../../components/shop/ShopMap";
+import {RenderAfterNavermapsLoaded} from "react-naver-maps";
 
 // core components
 // import PanelHeader from "components/PanelHeader/PanelHeader.js";
@@ -80,7 +82,17 @@ const Shop = () => {
                                     {/* 맛집 리스트 */}
                                     <ShopList shops={loadedShops}/>
                                 </Col>
-                                <Col md="8">{/* 맵 부분 */}</Col>
+                                <Col md="8">
+                                    <RenderAfterNavermapsLoaded
+                                        ncpClientId={'5eu50cwdvd'} // 자신의 네이버 계정에서 발급받은 Client ID
+                                        error={<p>Maps Load Error</p>}
+                                        loading={<p>Maps Loading...</p>}
+                                    >
+                                        <ShopMap/>
+                                    </RenderAfterNavermapsLoaded>
+
+
+                                </Col>
                             </Row>
                         </Card>
                     </Col>
