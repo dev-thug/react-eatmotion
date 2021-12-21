@@ -1,14 +1,51 @@
-import React from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import ReserveDatePicker from "./DatePicker";
-import StoreOverView from "./StoreOverView";
+import ShopDetail from "./ShopDetail";
 import classes from './ReserveForm.module.css'
+import AuthContext from "../../store/auth-context";
 
 const NewReserve = ({match}) => {
-    console.log(match)
+
+    const authCtx = useContext(AuthContext);
+
+    const timeInputRef = useRef();
+    const peopleInputRef = useRef();
+
+    const submitHandler = () => {
+        const enteredTime = timeInputRef.current.value;
+        const enteredPeople = peopleInputRef.current.value;
+
+        const reserve = {
+            title: enteredTime,
+            content: enteredPeople
+        }
+
+        fetch(`/api/reserve/${match.params.id}`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "authToken": authCtx.token
+                },
+                body : JSON.stringify(reserve)
+
+
+            }
+        )
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+
+                console.log(data)
+            })
+    }
+
+
     return (
         <div className={classes.divEntire}>
             <form className={classes.formEntire}>
-                <StoreOverView/>
+                <ShopDetail data={loadedShop}/>
                 <div className={classes.divGroup}>
                     <label className="form-label mt-4">예약자 이름</label>
                     <input type="text" className={classes.input} placeholder="성함을 작성해주세요"/>
@@ -20,7 +57,7 @@ const NewReserve = ({match}) => {
                 <div className={classes.divGroup}>
                     <label htmlFor="exampleSelect1" className="form-label mt-4">예약 인원수</label>
                     <br/>
-                    <select className={classes.input} id="exampleSelect1">
+                    <select className={classes.input} id="exampleSelect1" ref={peopleInputRef}>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
