@@ -14,14 +14,14 @@ import Shop from "./pages/shop/Shop";
 import NewPost from "./pages/board/NewPost";
 import PostItem from "./components/board/PostItem";
 import Post from "./pages/board/Post";
-import MakeReserve from "./components/reserve/MakeReserve";
-
+import NewReserve from "./components/reserve/NewReserve";
+import Reserve from "./pages/reserve/Reserve";
 
 
 function App() {
     const authCtx = useContext(AuthContext);
 
-    return (        <Layout>
+    return (<Layout>
             <Switch>
                 <Route path="/" exact>
                     <Main/>
@@ -47,10 +47,13 @@ function App() {
                 </Route>
                 <Route path="/post/:id" component={Post}>
                 </Route>
+                <Route path="/newreserve/:id" component={NewReserve}/>
+
+
                 <Route path="/reserve">
-                    <MakeReserve/>
+                    <Reserve/>
                 </Route>
-                <Route ath="*">
+                <Route path="*">
                     <Redirect to="/"/>
                 </Route>
             </Switch>
