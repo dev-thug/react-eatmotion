@@ -14,7 +14,7 @@ import Shop from "./pages/shop/Shop";
 import NewPost from "./pages/board/NewPost";
 import PostItem from "./components/board/PostItem";
 import Post from "./pages/board/Post";
-import MakeReserve from "./components/reserve/makeReserve";
+import MakeReserve from "./components/reserve/MakeReserve";
 
 
 
@@ -46,15 +46,11 @@ function App() {
                     <Shop/>
                 </Route>
                 <Route path="/post/:id" component={Post}>
-
                 </Route>
-                {/*<Route path="/reserve-make">*/}
-                {/*    <MakeReserve />*/}
-                {/*</Route>*/}
-                {/*<Route path="/reserve-list">*/}
-
-                {/*</Route>*/}
-                <Route path="*">
+                <Route path="/reserve">
+                    <MakeReserve/>
+                </Route>
+                <Route ath="*">
                     <Redirect to="/"/>
                 </Route>
             </Switch>
