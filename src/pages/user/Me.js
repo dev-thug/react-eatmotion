@@ -1,6 +1,7 @@
 import {useContext, useEffect, useState} from "react";
 import AuthContext from "../../store/auth-context";
 import UserInfo from "../../components/user/UserInfo";
+import classes from "./Me.module.css"
 
 
 const Me = () => {
@@ -42,7 +43,7 @@ const Me = () => {
     }
 
     return (
-         <div>
+         <div className={classes.me}>
              <UserInfo info={loadedMe}></UserInfo>
          </div>
     )

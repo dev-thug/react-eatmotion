@@ -1,3 +1,5 @@
+import classes from "./UserInfo.module.css"
+
 // reactstrap components
 import {
   Button,
@@ -21,8 +23,8 @@ import {
 
 const UserInfo = (props) => {
   return (
-    <div className="content" style={{ width: "30%", margin: "10% auto" }}>
-      <Row>
+    <div  style={{ width: "30%", margin: "10% auto" }}>
+      <Row className={classes.content}>
         <Col md="12">
           <Card>
             <CardHeader>
@@ -58,7 +60,7 @@ const UserInfo = (props) => {
                   <Col md="1"></Col>
                   <Col className="pr-1" md="10">
                     <FormGroup>
-                      <label>이름 :</label>
+                      <label>Name</label>
                       <Input
                         defaultValue={props.info.name}
                         disabled

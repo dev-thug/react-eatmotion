@@ -6,12 +6,14 @@
     justify-content: space-between;
     background-color: #ffcc66;
     padding: 0 10%;
+    text-decoration: none;
 }
 
 .logo {
     font-size: 2rem;
     color: white;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .logo-text{
@@ -42,6 +44,7 @@ nav::before {
     color: #fff;
     /*font: 400 24px/1 'Lato', sans-serif;*/
     text-align: center;
+    text-decoration: none;
 }
 
 
@@ -52,26 +55,31 @@ nav ul {
     padding: 0;
     list-style: none;
     z-index: 99999;
+    text-decoration: none;
 }
 
 nav ul::after {
     display: block;
     clear: both;
     content: '';
+    text-decoration: none;
 }
 
 nav ul li {
     position: relative;
     float: left;
+    text-decoration: none;
     /*border: 2px solid #fff;*/
 }
 
 nav ul li:not(:first-child) {
     border-left: none;
+    text-decoration: none;
 }
 
 nav ul li:hover {
     /*background-color: rgba(255, 255, 255, .3);*/
+    text-decoration: none;
 }
 
 nav ul li a {
@@ -83,34 +91,38 @@ nav ul li a {
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
+    text-decoration: none;
 }
 
 nav ul ul {
     position: absolute;
     top: 100%;
     left: -2px;
+    text-decoration: none;
 }
 
 nav ul ul li {
     float: none;
     margin: 0;
+    text-decoration: none;
 
 }
 
 nav ul ul li:not(:first-child) {
     /*border: 2px solid #fff;*/
     border-top: 2px solid #fff;
+    text-decoration: none;
 
 }
 nav ul ul li:first-child {
-
+    text-decoration: none;
 
     border-radius: 12px 12px 0px 0px;
 
 }
 nav ul ul li:last-child {
     /*border: 2px solid #fff;*/
-
+    text-decoration: none;
     border-radius: 0px 0px 12px 12px;
 
 }
@@ -119,7 +131,7 @@ nav ul ul li {
     /*border: 2px solid #fff;*/
     /*border-top: none;*/
     background: rgba(192, 147, 61, 0.9);
-
+    text-decoration: none;
 
 }
 
