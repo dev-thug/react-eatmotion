@@ -3,7 +3,8 @@ import ReserveDatePicker from "./DatePicker";
 import StoreOverView from "./StoreOverView";
 import classes from './ReserveForm.module.css'
 
-function MakeReserve() {
+const NewReserve = ({match}) => {
+    console.log(match)
     return (
         <div className={classes.divEntire}>
             <form className={classes.formEntire}>
@@ -43,4 +44,4 @@ function MakeReserve() {
     );
 }
 
-export default MakeReserve;
+export default NewReserve;
