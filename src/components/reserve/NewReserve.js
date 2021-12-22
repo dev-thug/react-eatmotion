@@ -1,14 +1,84 @@
-import React from 'react';
+import React, {useContext, useEffect, useRef, useState} from 'react';
 import ReserveDatePicker from "./DatePicker";
-import StoreOverView from "./StoreOverView";
+import ShopDetail from "./ShopDetail";
 import classes from './ReserveForm.module.css'
+import AuthContext from "../../store/auth-context";
 
 const NewReserve = ({match}) => {
-    console.log(match)
+
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadedShop, setLoadedShop] = useState("");
+
+    
+    
+    // 음식점 조회 시작 부분
+    useEffect(() => {
+        setIsLoading(true);
+        fetch(`/api/shop/${match.params.id}`,
+            {
+                
+            }
+            )
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+
+                setIsLoading(false);
+                setLoadedShop(data);
+                console.log(loadedShop)
+            })
+    }, []);
+
+    
+    // 예약 핸들러 시작부분
+    const authCtx = useContext(AuthContext);
+
+    const timeInputRef = useRef();
+    const peopleInputRef = useRef();
+
+    const submitHandler = () => {
+        const enteredTime = timeInputRef.current.value;
+        const enteredPeople = peopleInputRef.current.value;
+
+        const reserve = {
+            title: enteredTime,
+            content: enteredPeople
+        }
+
+        fetch(`/api/reserve/${match.params.id}`,
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "authToken": authCtx.token
+                },
+                body : JSON.stringify(reserve)
+
+
+            }
+        )
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+
+                console.log(data)
+            })
+    }
+
+    if (isLoading) {
+        return (
+            <section>
+                <p>Loading...</p>
+            </section>
+        )
+    }
+
     return (
         <div className={classes.divEntire}>
             <form className={classes.formEntire}>
-                <StoreOverView/>
+                <ShopDetail data={loadedShop}/>
                 <div className={classes.divGroup}>
                     <label className="form-label mt-4">예약자 이름</label>
                     <input type="text" className={classes.input} placeholder="성함을 작성해주세요"/>
