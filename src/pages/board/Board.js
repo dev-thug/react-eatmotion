@@ -34,7 +34,6 @@ const Board = () => {
 
     return (
         <div className={classes.boardborder}>
-            <h2>게시판</h2>
             <PostList content={loadedPosts}/>
             <Link to="post-write">글쓰기</Link>
         </div>

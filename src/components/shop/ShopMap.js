@@ -1,7 +1,6 @@
 import React from "react";
 import { NaverMap, loadNavermapsScript, Marker } from "react-naver-maps";
 
-import { withNavermaps } from "react-naver-maps/hocs";
 import Loadable from "react-loadable";
 
 class NaverMappView extends React.Component {
