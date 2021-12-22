@@ -14,7 +14,7 @@ const NewReserve = ({match}) => {
     // 음식점 조회 시작 부분
     useEffect(() => {
         setIsLoading(true);
-        fetch(`/api/reserve/${match.params.id}`,
+        fetch(`/api/shop/${match.params.id}`,
             {
                 
             }
