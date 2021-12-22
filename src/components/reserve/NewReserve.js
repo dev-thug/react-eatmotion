@@ -39,7 +39,7 @@ const NewReserve = ({match}) => {
 
 
     const [startDate, setStartDate] = useState();
-    const [people, setPeople] = useState();
+    const [people, setPeople] = useState(1);
 
 
     const selectHandler = (e) =>{

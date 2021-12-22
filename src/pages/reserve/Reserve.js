@@ -1,6 +1,49 @@
+import {useContext, useEffect, useState} from "react";
+import AuthContext from "../../store/auth-context";
+import ReserveList from "../../components/reserve/ReserveList";
+
 const Reserve = () => {
+    const authCtx = useContext(AuthContext);
+    const [isLoading, setIsLoading] = useState(true);
+    const [loadedReserves, setLoadedReserves] = useState([]);
+
+
+    useEffect(() => {
+        setIsLoading(true);
+        fetch("/api/reserves",
+            {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "authToken": authCtx.token
+                }
+            })
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+
+                setIsLoading(false);
+                setLoadedReserves(data);
+                console.log(loadedReserves)
+            })
+    }, []);
+
+
+    if (isLoading) {
+        return (
+            <section>
+                <p>Loading...</p>
+            </section>
+        )
+    }
+
+
     return (
-        <div>다녀간 음식점</div>
+        <div>
+            <h1>예약 조회</h1>
+            <ReserveList reserves={loadedReserves}/>
+        </div>
     )
 }
 
