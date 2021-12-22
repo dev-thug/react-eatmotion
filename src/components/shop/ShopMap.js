@@ -1,6 +1,5 @@
 import React from "react";
 import { NaverMap, loadNavermapsScript, Marker } from "react-naver-maps";
-
 import Loadable from "react-loadable";
 
 class NaverMappView extends React.Component {
@@ -28,10 +27,11 @@ class NaverMappView extends React.Component {
     const { navermaps } = this.props;
     this.setState({ center });
   }
-  onClickMarker(){
+  onClickMarker(x,y){
     const navermaps = window.naver.maps;
     this.setState(() => ({
-      center: new navermaps.LatLng(37.5070447,126.8877355),
+      // center: new navermaps.LatLng(37.5070447,126.8877355),
+      center: new navermaps.LatLng(x,y),
     }));
 
   }
@@ -60,9 +60,10 @@ class NaverMappView extends React.Component {
             <Marker
               key={shop.id}
               // 팔보면옥
-              position={new navermaps.LatLng(37.5070447,126.8877355)}
+              // position={new navermaps.LatLng(37.5070447,126.8877355)}
+              position={new navermaps.LatLng(shop.x,shop.y)}
               animation={2}
-              onClick={(shop) => this.onClickMarker(shop)}
+              onClick={(shop) => this.onClickMarker(shop.x,shop.y)}
             />
           ))}
         </NaverMap>
