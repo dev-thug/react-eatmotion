@@ -1,8 +1,10 @@
 import React, {useContext, useEffect, useRef, useState} from 'react';
-import ReserveDatePicker from "./DatePicker";
+import { ko } from "date-fns/esm/locale";
 import ShopDetail from "./ShopDetail";
-import classes from './ReserveForm.module.css'
+import "react-datepicker/dist/react-datepicker.css"
 import AuthContext from "../../store/auth-context";
+import DatePicker from "react-datepicker";
+import classes from './ReserveForm.module.css';
 
 const NewReserve = ({match}) => {
 
@@ -34,18 +36,26 @@ const NewReserve = ({match}) => {
     // 예약 핸들러 시작부분
     const authCtx = useContext(AuthContext);
 
-    const timeInputRef = useRef();
-    const peopleInputRef = useRef();
 
-    const submitHandler = () => {
-        const enteredTime = timeInputRef.current.value;
-        const enteredPeople = peopleInputRef.current.value;
+    const [startDate, setStartDate] = useState();
+    const [people, setPeople] = useState();
+
+    
+    const selectHandler = (e) =>{
+        setPeople(e.target.value)
+    }
+
+
+    const submitHandler = (event) => {
+        event.preventDefault()
+
 
         const reserve = {
-            title: enteredTime,
-            content: enteredPeople
+            reserveDateTime: startDate,
+            reserveNumberOfPeople: people
         }
 
+        console.log(reserve)
         fetch(`/api/reserve/${match.params.id}`,
             {
                 method: "POST",
@@ -77,7 +87,7 @@ const NewReserve = ({match}) => {
 
     return (
         <div className={classes.divEntire}>
-            <form className={classes.formEntire}>
+            <form className={classes.formEntire} onSubmit={submitHandler}>
                 <ShopDetail data={loadedShop}/>
                 <div className={classes.divGroup}>
                     <label className="form-label mt-4">예약자 이름</label>
@@ -90,7 +100,7 @@ const NewReserve = ({match}) => {
                 <div className={classes.divGroup}>
                     <label htmlFor="exampleSelect1" className="form-label mt-4">예약 인원수</label>
                     <br/>
-                    <select className={classes.input} id="exampleSelect1">
+                    <select className={classes.input} id="exampleSelect1" onChange={selectHandler}>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -101,7 +111,18 @@ const NewReserve = ({match}) => {
                     <label className="form-label mt-4">예약 일정</label>
                     <br/>
                     <label className={classes.smallLabel}> 클릭하여 예약일정을 선택해주세요</label>
-                    <ReserveDatePicker className={classes.input}/>
+                    <DatePicker
+                        className={classes.input}
+                        locale={ko}
+                        selected={startDate}
+                        onChange={(date) => setStartDate(date)}
+                        showTimeSelect
+                        timeFormat="HH:mm"
+                        timeIntervals={30}
+                        minDate={new Date()}
+                        timeCaption="time"
+                        dateFormat="Pp"
+                    />
                 </div>
                 <div className={classes.divGroup}>
                     <label className="form-label mt-4">요청 사항</label>
