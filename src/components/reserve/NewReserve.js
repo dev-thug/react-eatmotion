@@ -75,7 +75,7 @@ const NewReserve = ({match}) => {
             .then(data => {
 
                 console.log(data)
-                history.replace("/")
+                history.replace("/reserve")
             })
     }
 
