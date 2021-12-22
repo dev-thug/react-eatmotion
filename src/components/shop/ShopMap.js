@@ -34,6 +34,7 @@ class NaverMappView extends React.Component {
       center: new navermaps.LatLng(x,y),
     }));
 
+    console.log(x, y)
   }
   // onClickMarker() {
   //   const navermaps = window.naver.maps;
@@ -61,9 +62,9 @@ class NaverMappView extends React.Component {
               key={shop.id}
               // 팔보면옥
               // position={new navermaps.LatLng(37.5070447,126.8877355)}
-              position={new navermaps.LatLng(shop.x,shop.y)}
+              position={new navermaps.LatLng(shop.y,shop.x)}
               animation={2}
-              onClick={(shop) => this.onClickMarker(shop.x,shop.y)}
+              // onClick={this.onClickMarker(shop.y,shop.x)}
             />
           ))}
         </NaverMap>
