@@ -3,12 +3,14 @@ import classes from "./ReviewItem.module.css";
 const ReviewItem = (props) => {
     return (
         <div className={classes.reviewlist}>
-            <p>리뷰 번호 : {props.id}</p>
-            <p>리뷰 내용 : {props.content}</p>
-            <p>리뷰 점수 : {props.grade}</p>
-            <p>작성일 : {props.modifiedDate}</p>
-            <p>사용자 키값 : {props.userId}</p>
-            <p>사용자 이름 : {props.userName}</p>
+            <div className={classes.head}>
+                <h5 className={classes.username}>{props.userName}</h5>
+                <div className={classes.grade}>{props.grade}</div>
+            </div>
+            {/* <p>리뷰 번호 : {props.id}</p> */}
+            <p>{props.content}</p>
+            <div className={classes.date}>{props.modifiedDate}</div>
+            {/* <p>사용자 키값 : {props.userId}</p> */}
         </div>
     )
 }
