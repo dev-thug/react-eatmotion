@@ -10,11 +10,18 @@ import {
     Col,
     Button,
 } from "reactstrap";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
+
 
 function ShopItem(props) {
+    const history = useHistory();
+    const url = "/newreserve/" + props.id
+    const shopInfo = "/shop-info/" + props.id;
+    const clickHandler = () => {
 
-    const url = "/newreserve/"+props.id
+        history.replace(shopInfo)
+
+    }
 
     console.log(props.id)
     return (
@@ -22,9 +29,10 @@ function ShopItem(props) {
         <div className={classes["shop-item"]} key={props.key}>
             <Row>
                 {/* <p>{props.id}</p> */}
-                <Col md="9">
+                <Col md="9"  onClick={clickHandler}>
                     <strong>{props.name}</strong>
                     <p>{props.address}</p>
+                    {/*<p>평점 : {props.grade}</p>*/}
                 </Col>
                 <Col md="3">
                     {/* <a href="/reserve-make">예약&nbsp;&nbsp;&nbsp;</a> */}

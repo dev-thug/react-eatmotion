@@ -2,7 +2,7 @@ import {useContext, useRef} from "react";
 import {useHistory} from "react-router-dom";
 import AuthContext from "../../store/auth-context";
 
-const NewReviewForm = ({match}) => {
+const NewReviewForm = (props) => {
 
     const contentInputRef = useRef();
     const history = useHistory();
@@ -23,12 +23,12 @@ const NewReviewForm = ({match}) => {
 
 
     const addReviewHandler = (review) => {
-
+        console.log(JSON.stringify(review))
         fetch(
-            `/api/text-review/${match.params.id}`,
+            `/api/text-review/${props.id}`,
             {
                 method: "POST",
-                body: JSON.stringify(review),
+                body: review.content,
                 headers: {
                     "Content-Type": "application/json",
                     "authToken": authCtx.token
@@ -37,7 +37,7 @@ const NewReviewForm = ({match}) => {
         ).then(res => {
             console.log(res)
         }).then(() => {
-            history.replace("/reserve")
+            window.location.replace(`/shop-info/${props.id}`)
         })
     }
     return (
