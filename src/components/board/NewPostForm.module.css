@@ -5,6 +5,12 @@
     margin-top: 6%;
 }
 
+.post-detail{
+    border: 2px solid #DFDFDF;
+    border-radius: 5%;
+    padding: 2%;
+}
+
 .input {
     width: 700px;
     padding: 12px 20px;

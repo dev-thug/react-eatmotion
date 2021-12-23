@@ -8,14 +8,10 @@ const PostDetail = (props) => {
         <Row>
           <Col md="12">
             <label className={classes.font} htmlFor="title">
-              제목
+            {props.title}
             </label>
           </Col>
-        </Row>
-        <Row>
-          <Col md="12">
-            <label className={classes.title}>{props.title}</label>
-          </Col>
+          <div className={classes.line}></div>
         </Row>
         <Row>
           <Col md="3">

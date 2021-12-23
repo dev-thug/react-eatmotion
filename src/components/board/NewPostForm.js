@@ -26,7 +26,7 @@ const NewPostForm = (props) => {
 
     return (
         <div className={classes.divEntire}>
-            <form onSubmit={submitHandler}>
+            <form onSubmit={submitHandler}  className={classes[`post-detail`]}>
                 <div>
                     <label className={classes.font} htmlFor="title">제목</label>
                     <br/>
