@@ -55,7 +55,7 @@ const ShopInfo = ({match}) => {
                     <h2 className={classes.shopname}>{loadedShop.name}</h2>
                     <div className={classes.classification}>{loadedShop.foodClassific}</div>
                 </div>
-                <h1 className={classes.rate}>평점</h1>
+                <h1 className={classes.rate}>{loadedShop.grade}</h1>
             </div>
             <br></br>
             <div className={classes.line}></div>

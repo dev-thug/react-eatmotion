@@ -38,7 +38,7 @@ function ShopItem(props) {
                 <Col md="9" onClick={clickHandler}>
                     <strong>{props.name}</strong>
                     <p>{props.address}</p>
-                    {/*<p>평점 : {props.grade}</p>*/}
+                    <p>평점 {props.grade}</p>
                 </Col>
                 <Col md="3">
                     {/* <a href="/reserve-make">예약&nbsp;&nbsp;&nbsp;</a> */}
