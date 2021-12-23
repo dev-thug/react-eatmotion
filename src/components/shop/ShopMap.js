@@ -2,16 +2,6 @@ import React from "react";
 import { NaverMap, loadNavermapsScript, Marker } from "react-naver-maps";
 import Loadable from "react-loadable";
 
-
-let latitude = 0;
-let longitude = 0;
-console.log(latitude, longitude)
-navigator.geolocation.getCurrentPosition((pos) => {
-  latitude = pos.coords.latitude //y
-  longitude = pos.coords.longitude //x
-  console.log(latitude, longitude)
-});
-
 class NaverMappView extends React.Component {
   constructor(props) {
     super(props);
@@ -20,10 +10,9 @@ class NaverMappView extends React.Component {
     this.shops = props.shops;
     this.state = {
       zoom: 16,
-      center: new navermaps.LatLng(latitude, longitude),
+      center: new navermaps.LatLng(37.566018, 127.036464),
     };
 
-    console.log("좌표", latitude)
     this.handleCenterChanged = this.handleCenterChanged.bind(this);
     this.handleZoomChanged = this.handleZoomChanged.bind(this);
     // this.onClickButton = this.onClickButton.bind(this);
@@ -59,27 +48,27 @@ class NaverMappView extends React.Component {
     const { navermaps } = this.props;
 
     return (
-      // <div id ="zxc" style={{ width: "100%", height: "100%" }}>
-      <div>
-        <NaverMap
-          style={{ width: '100%', height: '85vh' }}
-          zoom={zoom}
-          onZoomChanged={this.handleZoomChanged}
-          center={center}
-          onCenterChanged={this.handleCenterChanged}
-        >
-          {this.shops.map((shop) => (
-            <Marker
-              key={shop.id}
-              // 팔보면옥
-              // position={new navermaps.LatLng(37.5070447,126.8877355)}
-              position={new navermaps.LatLng(shop.y,shop.x)}
-              animation={2}
-              // onClick={this.onClickMarker(shop.y,shop.x)}
-            />
-          ))}
-        </NaverMap>
-      </div>
+        // <div id ="zxc" style={{ width: "100%", height: "100%" }}>
+        <div>
+          <NaverMap
+              style={{ width: '100%', height: '85vh' }}
+              zoom={zoom}
+              onZoomChanged={this.handleZoomChanged}
+              center={center}
+              onCenterChanged={this.handleCenterChanged}
+          >
+            {this.shops.map((shop) => (
+                <Marker
+                    key={shop.id}
+                    // 팔보면옥
+                    // position={new navermaps.LatLng(37.5070447,126.8877355)}
+                    position={new navermaps.LatLng(shop.y,shop.x)}
+                    animation={2}
+                    // onClick={this.onClickMarker(shop.y,shop.x)}
+                />
+            ))}
+          </NaverMap>
+        </div>
     );
   }
 }
@@ -93,7 +82,7 @@ const NavermapsLoadableComponent = Loadable({
 
   render(navermaps, props) {
     return (
-      <NaverMappView navermaps={navermaps} {...props} shops={props.shops} />
+        <NaverMappView navermaps={navermaps} {...props} shops={props.shops} />
     );
   },
 
@@ -109,9 +98,9 @@ const NavermapsLoadableComponent = Loadable({
 });
 const ShopMap = (props) => {
   return (
-    <div>
-      <NavermapsLoadableComponent shops={props.shops} />
-    </div>
+      <div>
+        <NavermapsLoadableComponent shops={props.shops} />
+      </div>
   );
 };
 
