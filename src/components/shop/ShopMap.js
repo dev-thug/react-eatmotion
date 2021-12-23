@@ -9,8 +9,8 @@ class NaverMappView extends React.Component {
     const { navermaps } = props;
     this.shops = props.shops;
     this.state = {
-      zoom: 13,
-      center: new navermaps.LatLng(37.554722, 126.970833),
+      zoom: 16,
+      center: new navermaps.LatLng(37.566018, 127.036464),
     };
 
     this.handleCenterChanged = this.handleCenterChanged.bind(this);
