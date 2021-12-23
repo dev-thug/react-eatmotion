@@ -5,12 +5,13 @@ import "react-datepicker/dist/react-datepicker.css"
 import AuthContext from "../../store/auth-context";
 import DatePicker from "react-datepicker";
 import classes from './ReserveForm.module.css';
+import {useHistory} from "react-router-dom";
 
 const NewReserve = ({match}) => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [loadedShop, setLoadedShop] = useState("");
-
+    const history = useHistory();
     
     
     // 음식점 조회 시작 부분
@@ -38,9 +39,9 @@ const NewReserve = ({match}) => {
 
 
     const [startDate, setStartDate] = useState();
-    const [people, setPeople] = useState();
+    const [people, setPeople] = useState(1);
 
-    
+
     const selectHandler = (e) =>{
         setPeople(e.target.value)
     }
@@ -74,6 +75,7 @@ const NewReserve = ({match}) => {
             .then(data => {
 
                 console.log(data)
+                history.replace("/reserve")
             })
     }
 
