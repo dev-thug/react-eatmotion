@@ -1,0 +1,73 @@
+.shopinfo{
+    margin-top: 2px;
+    margin-left: 20%;
+    margin-right:20%;
+}
+.backbtn{
+    background-color: lightgray;
+    color: white;
+    font-size: 5px;
+    padding: 8px 40px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    border: none;
+    margin-right: 130px;
+    width:100%;
+    margin-bottom: 30px;
+}
+.shopimage{
+    width:100%;
+    height:500px;
+    background:lightgray;
+    text-align: center;
+    border-radius: 5px;
+}
+.shopinfohead{
+    width:100%;
+    height:100px;
+
+}
+.nametype{
+    float:left;
+}
+.shopname{
+margin-top:20px;
+margin-bottom: 10px;
+}
+.classification{
+color:darkgray;
+margin-bottom:30px;
+font-weight: bold;
+}
+.rate{
+    color:#ffcc664f;
+    float: right;
+    padding-top: 20px;
+}
+.line{
+    padding-top: 2px;
+    margin-bottom:10px;
+    margin-top:10px;
+    width:100%;
+    background:#FFCC66; 
+}
+.location{
+    color:darkgray;
+    margin-bottom: 10px;
+}
+.address{
+color:darkgray;
+font-weight: bold;
+margin-bottom: 30px;
+}
+.reviewview{
+    width:100%;
+    border-radius: 5px;
+}
+.reviewhead{
+    text-align: center;
+    border-bottom: 5px;
+    color:darkgray;
+    font-weight: bold;
+}

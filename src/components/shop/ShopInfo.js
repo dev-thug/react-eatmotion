@@ -3,6 +3,7 @@ import ShopItem from "./ShopItem";
 import ReviewList from "../review/ReviewList";
 import {Link} from "react-router-dom";
 import NewReviewForm from "../review/NewReviewForm";
+import classes from "./ShopInfo.module.css"
 
 const ShopInfo = ({match}) => {
 
@@ -45,14 +46,26 @@ const ShopInfo = ({match}) => {
     }
 
     return (
-        <div>
-            <div>음식점 정보</div>
-            <p>음식점 명 : {loadedShop.name}</p>
-            <p>음식점 주소 : {loadedShop.address}</p>
-            <p>음식점 분류 : {loadedShop.foodClassific}</p>
-            <ReviewList reviews={loadedReviews}></ReviewList>
-            <Link to="/shop"><button>뒤로가기</button></Link>
+        <div className={classes.shopinfo}>
+            <Link to="/shop"><button className={classes.backbtn}>지도로 돌아가기</button></Link>
+            <div className={classes.shopimage}>음식점 이미지 여기</div>
+            <div className={classes.shopinfohead}>
+                <div className={classes.nametype}>
+                    <h2 className={classes.shopname}>{loadedShop.name}</h2>
+                    <div className={classes.classification}>{loadedShop.foodClassific}</div>
+                </div>
+                <h1 className={classes.rate}>평점</h1>
+            </div>
+            <br></br>
+            <div className={classes.line}></div>
+            <div className={classes.location}>찾아오는 길</div>
+            <div className={classes.address}>{loadedShop.address}</div>
+            <div className={classes.line}></div>
             <NewReviewForm id={loadedShop.id}></NewReviewForm>
+            <div className={classes.line}></div>
+            <h4 className={classes.reviewhead}>리뷰 보기</h4>
+            <ReviewList reviews={loadedReviews}></ReviewList>
+            
         </div>
     )
 }
