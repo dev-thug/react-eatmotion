@@ -1,5 +1,6 @@
 import PostItem from "../board/PostItem";
 import ReserveItem from "./ReserveItem";
+import classes from './ReserveList.module.css';
 
 const ReserveList = (props) => {
 

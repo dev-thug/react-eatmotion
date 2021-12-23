@@ -41,7 +41,6 @@ const Reserve = () => {
 
     return (
         <div>
-            <h1>예약 조회</h1>
             <ReserveList reserves={loadedReserves}/>
         </div>
     )
