@@ -5,7 +5,7 @@ const ReviewItem = (props) => {
         <div className={classes.reviewlist}>
             <div className={classes.head}>
                 <h5 className={classes.username}>{props.userName}</h5>
-                <div className={classes.grade}>{props.grade}</div>
+                <div className={classes.grade}>{Math.round(props.grade)}</div>
             </div>
             <p>{props.content}</p>
             <div className={classes.date}>{props.modifiedDate}</div>
