@@ -1,4 +1,8 @@
+import {Link} from "react-router-dom";
+
 const ReserveItem = (props) => {
+
+    const path = "/review/"+props.shopId
     return (
         <div>
             <p>예약 번호 : {props.id}</p>
@@ -9,7 +13,9 @@ const ReserveItem = (props) => {
             <p>음식점 평점 : {props.shopGrade}</p>
             <p>음식점 분류 : {props.shopPart}</p>
             <p>사용자 번호 : {props.userId}</p>
+            <Link to={path}>리뷰 작성</Link>
             <br/>
+
         </div>
     )
 }
