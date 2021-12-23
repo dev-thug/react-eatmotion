@@ -10,15 +10,14 @@ class NaverMappView extends React.Component {
     this.shops = props.shops;
     this.state = {
       zoom: 16,
-      center: new navermaps.LatLng(37.566018, 127.036464),
+      // center: new navermaps.LatLng(37.566018, 127.036464),
+      center: new navermaps.LatLng(props.x, props.y),
     };
 
     this.handleCenterChanged = this.handleCenterChanged.bind(this);
     this.handleZoomChanged = this.handleZoomChanged.bind(this);
-    // this.onClickButton = this.onClickButton.bind(this);
     this.onClickMarker = this.onClickMarker.bind(this);
   }
-
   handleZoomChanged(zoom) {
     this.setState({ zoom });
   }
@@ -27,28 +26,21 @@ class NaverMappView extends React.Component {
     const { navermaps } = this.props;
     this.setState({ center });
   }
-  onClickMarker(x,y){
+  onClickMarker(shop){
     const navermaps = window.naver.maps;
     this.setState(() => ({
       // center: new navermaps.LatLng(37.5070447,126.8877355),
-      center: new navermaps.LatLng(x,y),
+      center: new navermaps.LatLng(shop.y,shop.x),
     }));
-
-    console.log(x, y)
+    // console.log(x,y);
+    alert(shop.name);
   }
-  // onClickMarker() {
-  //   const navermaps = window.naver.maps;
-  //   this.setState(() => ({
-  //     center: new navermaps.LatLng(37.554722, 126.970833),
-  //   }));
-  // }
 
   render() {
     const { center, zoom } = this.state;
     const { navermaps } = this.props;
 
     return (
-        // <div id ="zxc" style={{ width: "100%", height: "100%" }}>
         <div>
           <NaverMap
               style={{ width: '100%', height: '85vh' }}
@@ -64,7 +56,8 @@ class NaverMappView extends React.Component {
                     // position={new navermaps.LatLng(37.5070447,126.8877355)}
                     position={new navermaps.LatLng(shop.y,shop.x)}
                     animation={2}
-                    // onClick={this.onClickMarker(shop.y,shop.x)}
+                    // onClick={this.onClickMarker.bind(this,shop.y,shop.x)}
+                    onClick={this.onClickMarker.bind(this,shop)}
                 />
             ))}
           </NaverMap>
@@ -82,7 +75,7 @@ const NavermapsLoadableComponent = Loadable({
 
   render(navermaps, props) {
     return (
-        <NaverMappView navermaps={navermaps} {...props} shops={props.shops} />
+        <NaverMappView navermaps={navermaps} {...props} shops={props.shops} x={props.x} y={props.y}/>
     );
   },
 
@@ -99,33 +92,9 @@ const NavermapsLoadableComponent = Loadable({
 const ShopMap = (props) => {
   return (
       <div>
-        <NavermapsLoadableComponent shops={props.shops} />
+        <NavermapsLoadableComponent shops={props.shops} x={props.x} y={props.y} />
       </div>
   );
 };
 
 export default ShopMap;
-
-// // const ShopMap = (props) => {
-// //   const navermaps = window.naver.maps;
-
-// //   return (
-// //     <NaverMap
-// //       mapDivId={"maps-getting-started-uncontrolled"} // default: react-naver-map
-// //       style={{
-// //         width: "100%", // 네이버지도 가로 길이
-// //         height: "85vh", // 네이버지도 세로 길이
-// //       }}
-// //       defaultCenter={{ lat: 37.554722, lng: 126.970833 }} // 지도 초기 위치
-// //       defaultZoom={13} // 지도 초기 확대 배율
-// //     ></NaverMap>
-// //   );
-// // };
-
-// {
-//   /* <RenderAfterNavermapsLoaded
-// ncpClientId={'5eu50cwdvd'} // 자신의 네이버 계정에서 발급받은 Client ID
-// error={<p>Maps Load Error</p>}
-// loading={<p>Maps Loading...</p>}
-// ></RenderAfterNavermapsLoaded> */
-// }
