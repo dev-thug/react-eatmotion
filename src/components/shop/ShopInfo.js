@@ -4,6 +4,7 @@ import ReviewList from "../review/ReviewList";
 import {Link} from "react-router-dom";
 import NewReviewForm from "../review/NewReviewForm";
 import classes from "./ShopInfo.module.css"
+import Loading from "../ui/Loading";
 
 const ShopInfo = ({match}) => {
 
@@ -40,7 +41,7 @@ const ShopInfo = ({match}) => {
     if (isLoading) {
         return (
             <section>
-                <p>Loading...</p>
+                <Loading/>
             </section>
         )
     }

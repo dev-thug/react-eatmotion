@@ -11,12 +11,18 @@ import {
     Button,
 } from "reactstrap";
 import {Link, useHistory} from "react-router-dom";
+import {useContext} from "react";
+import AuthContext from "../../store/auth-context";
 
 
 function ShopItem(props) {
     const history = useHistory();
     const url = "/newreserve/" + props.id
     const shopInfo = "/shop-info/" + props.id;
+    const authCtx = useContext(AuthContext);
+
+    const isLoggedIn = authCtx.isLoggedIn;
+
     const clickHandler = () => {
 
         history.replace(shopInfo)
@@ -29,14 +35,16 @@ function ShopItem(props) {
         <div className={classes["shop-item"]} key={props.key}>
             <Row>
                 {/* <p>{props.id}</p> */}
-                <Col md="9"  onClick={clickHandler}>
+                <Col md="9" onClick={clickHandler}>
                     <strong>{props.name}</strong>
                     <p>{props.address}</p>
                     {/*<p>평점 : {props.grade}</p>*/}
                 </Col>
                 <Col md="3">
                     {/* <a href="/reserve-make">예약&nbsp;&nbsp;&nbsp;</a> */}
-                    <Link to={url}><Button color="warning">예약&nbsp;&nbsp;&nbsp;</Button></Link>
+                    {isLoggedIn && (
+                        <Link to={url}><Button color="warning">예약&nbsp;&nbsp;&nbsp;</Button></Link>
+                    )}
                 </Col>
             </Row>
         </div>

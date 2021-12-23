@@ -6,6 +6,7 @@ import {
     Col,
 } from "reactstrap";
 import ShopMap from "../../components/shop/ShopMap";
+import Loading from "../../components/ui/Loading";
 
 
 // core components
@@ -64,7 +65,7 @@ const Shop = () => {
     if (isLoading) {
         return (
             <section>
-                <p>Loading...</p>
+              <Loading/>
             </section>
         );
     }

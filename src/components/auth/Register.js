@@ -28,7 +28,12 @@ const Register = () => {
     }).then((res) => {
       if (res.ok) {
         history.replace("/login");
+        alert("회원가입 성공")
+      }else {
+        throw res.json();
       }
+    }).catch(res=>{
+      alert("회원가입 실패")
     });
   };
 
@@ -53,7 +58,7 @@ const Register = () => {
         <p className={classes.e}>Eatmotion</p>
         <br></br>
         <input type="text" placeholder="이름" ref={nameInputRef}/>
-        <input type="text" placeholder="E-mail" ref={emailInputRef} />
+        <input type="email" placeholder="E-mail" ref={emailInputRef} />
         <input type="password" placeholder="비밀번호" ref={passwordInputRef} />
         <button>회원가입</button>
         <p className={classes.message}>
