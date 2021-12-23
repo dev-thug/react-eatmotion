@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400&display=swap');
+
+.listDiv {
+    display: block;
+
+    background-color: rgb(239, 233, 232);
+    border: 1px solid #f5f3cc;
+    text-align: justify-all;
+    width: 50%;
+    height: 50%;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-left: 25%;
+    margin-bottom: 40px;
+    padding-left: 70px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+.shopName {
+    padding-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.btn {
+    padding: 14px 20px;
+    margin-right: 30px;
+    background-color: azure;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    font-weight: bold;
+}
