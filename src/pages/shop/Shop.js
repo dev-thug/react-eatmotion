@@ -83,7 +83,7 @@ const Shop = () => {
                                     <ShopList shops={loadedShops}/>
                                 </Col>
                                 <Col md="8">
-                                    <ShopMap shops={loadedShops} />
+                                    <ShopMap shops={loadedShops} x={latitude} y={longitude}/>
                                 </Col>
                             </Row>
                         </Card>
