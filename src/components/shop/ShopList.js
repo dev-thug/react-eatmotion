@@ -6,7 +6,7 @@ const ShopList = (props) => {
     <div >
         <ul className={classes['shop-list']} style={{height:"800px"}}>
           {props.shops.map((shop) => (
-            <ShopItem key={shop.id} id={shop.id} name={shop.name} address={shop.address} />
+            <ShopItem key={shop.id} id={shop.id} name={shop.name} address={shop.address} grade={shop.grade}/>
           ))}
         </ul>
     </div>

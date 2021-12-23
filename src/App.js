@@ -17,6 +17,7 @@ import Post from "./pages/board/Post";
 import NewReserve from "./components/reserve/NewReserve";
 import Reserve from "./pages/reserve/Reserve";
 import NewReviewForm from "./components/review/NewReviewForm";
+import ShopInfo from "./components/shop/ShopInfo";
 
 
 function App() {
@@ -50,6 +51,7 @@ function App() {
                 </Route>
                 <Route path="/newreserve/:id" component={NewReserve}/>
                 <Route path="/review/:id" component={NewReviewForm}/>
+                <Route path="/shop-info/:id" component={ShopInfo}/>
 
                 <Route path="/reserve">
                     <Reserve/>
