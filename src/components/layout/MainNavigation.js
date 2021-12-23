@@ -36,16 +36,14 @@ const MainNavigation = () => {
                         </ul>
                     </li>
                     {isLoggedIn && (
-                    <li>
-                        <a href="#">내 정보</a>
-                        <ul>
-                            <li><Link to="/me">회원 정보</Link></li>
-                            <li><Link to="/reserve">예약 조회</Link></li>
-                            <li><a href="#">남긴 리뷰</a></li>
-
-                        </ul>
-                    </li>
-                        )}
+                        <li>
+                            <a href="#">내 정보</a>
+                            <ul>
+                                <li><Link to="/me">회원 정보</Link></li>
+                                <li><Link to="/reserve">예약 조회</Link></li>
+                            </ul>
+                        </li>
+                    )}
                 </ul>
             </nav>
         </header>
