@@ -18,10 +18,10 @@ const UserInterface = () => {
 
         <div className={classes.left}>
             {!isLoggedIn && (
-                <Link to="/login"><p>로그인</p></Link>
+                <Link to="/login"><button className={classes.Btn}>로그인</button></Link>
             )}
             {isLoggedIn && (
-                <a onClick={logoutHandler}><p>로그아웃</p></a>
+                <a onClick={logoutHandler}><button className={classes.Btn}>로그아웃</button></a>
             )}
         </div>
 
