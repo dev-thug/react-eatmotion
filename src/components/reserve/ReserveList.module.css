@@ -3,8 +3,8 @@
 .listDiv {
     display: block;
 
-    background-color: rgb(239, 233, 232);
-    border: 1px solid #f5f3cc;
+    background-color: #ffcc6636;
+    border: 1px solid #Fff;
     text-align: justify-all;
     width: 50%;
     height: 50%;
@@ -28,7 +28,7 @@
 .btn {
     padding: 14px 20px;
     margin-right: 30px;
-    background-color: azure;
+    background-color: #ffcc66;
     border: none;
     border-radius: 10px;
     font-family: 'Noto Sans KR', sans-serif;
