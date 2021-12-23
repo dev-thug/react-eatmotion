@@ -36,7 +36,7 @@ const PostList = (props) => {
               </CardHeader>
               <CardBody>
                 <Table responsive>
-                  <thead className="text-primary">
+                  <thead className={classes.thead}>
                     <tr>
                       {thead.map((prop, key) => {
                         if (key === thead.length - 1)

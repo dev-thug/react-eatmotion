@@ -26,7 +26,7 @@ const SimpleSlider = () => {
 
     return (
         <div>
-
+            <br></br>
             <Slider {...settings}>
                 <div>
 
