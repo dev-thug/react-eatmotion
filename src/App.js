@@ -16,6 +16,7 @@ import PostItem from "./components/board/PostItem";
 import Post from "./pages/board/Post";
 import NewReserve from "./components/reserve/NewReserve";
 import Reserve from "./pages/reserve/Reserve";
+import NewReviewForm from "./components/review/NewReviewForm";
 
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
                 <Route path="/post/:id" component={Post}>
                 </Route>
                 <Route path="/newreserve/:id" component={NewReserve}/>
-
+                <Route path="/review/:id" component={NewReviewForm}/>
 
                 <Route path="/reserve">
                     <Reserve/>
