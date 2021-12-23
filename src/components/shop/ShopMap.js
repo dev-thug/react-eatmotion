@@ -2,6 +2,16 @@ import React from "react";
 import { NaverMap, loadNavermapsScript, Marker } from "react-naver-maps";
 import Loadable from "react-loadable";
 
+
+let latitude = 0;
+let longitude = 0;
+console.log(latitude, longitude)
+navigator.geolocation.getCurrentPosition((pos) => {
+  latitude = pos.coords.latitude //y
+  longitude = pos.coords.longitude //x
+  console.log(latitude, longitude)
+});
+
 class NaverMappView extends React.Component {
   constructor(props) {
     super(props);
@@ -10,9 +20,10 @@ class NaverMappView extends React.Component {
     this.shops = props.shops;
     this.state = {
       zoom: 16,
-      center: new navermaps.LatLng(37.566018, 127.036464),
+      center: new navermaps.LatLng(latitude, longitude),
     };
 
+    console.log("좌표", latitude)
     this.handleCenterChanged = this.handleCenterChanged.bind(this);
     this.handleZoomChanged = this.handleZoomChanged.bind(this);
     // this.onClickButton = this.onClickButton.bind(this);

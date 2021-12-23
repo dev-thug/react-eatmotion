@@ -32,7 +32,8 @@ const Shop = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedShops, setLoadedShops] = useState([]);
 
-
+    const [x, setLatitude] = useState(0)
+    const [y, setLongitude] = useState(0)
     useEffect(() => {
 
 
@@ -53,6 +54,8 @@ const Shop = () => {
                 console.log(data);
                 setIsLoading(false);
                 setLoadedShops(data);
+                setLatitude(latitude)
+                setLongitude(longitude)
 
             });
 
@@ -79,7 +82,7 @@ const Shop = () => {
                                     <ShopList shops={loadedShops}/>
                                 </Col>
                                 <Col md="8">
-                                    <ShopMap shops={loadedShops}/>
+                                    <ShopMap shops={loadedShops} />
                                 </Col>
                             </Row>
                         </Card>
