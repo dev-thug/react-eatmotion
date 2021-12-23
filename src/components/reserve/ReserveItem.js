@@ -1,19 +1,20 @@
 import {Link} from "react-router-dom";
+import classes from './ReserveList.module.css';
 
 const ReserveItem = (props) => {
 
     const path = "/review/"+props.shopId
     return (
-        <div>
+        <div className={classes.listDiv}>
+            <p className={classes.shopName}>{props.shopName} </p>
+            <p>평점 : {props.shopGrade}</p>
             <p>예약 번호 : {props.id}</p>
             <p>예약 인원 : {props.reserveNumberOfPeople}</p>
-            <p>예약 시간 : {props.reserveDateTime}</p>
-            <p>음식점 번호 : {props.shopId}</p>
-            <p>음식점 이름 : {props.shopName}</p>
-            <p>음식점 평점 : {props.shopGrade}</p>
+            <p>예약 일정 : {props.reserveDateTime}</p>
+
             <p>음식점 분류 : {props.shopPart}</p>
-            <p>사용자 번호 : {props.userId}</p>
-            <Link to={path}>리뷰 작성</Link>
+            <Link to={path}><button className={classes.btn}>예약 상세보기</button></Link>
+            <Link to={path}><button className={classes.btn}>리뷰 작성</button></Link>
             <br/>
 
         </div>
