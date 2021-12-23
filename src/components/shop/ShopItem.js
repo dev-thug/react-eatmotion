@@ -22,7 +22,7 @@ function ShopItem(props) {
         <div className={classes["shop-item"]} key={props.key}>
             <Row>
                 {/* <p>{props.id}</p> */}
-                <Col md="8">
+                <Col md="9">
                     <strong>{props.name}</strong>
                     <p>{props.address}</p>
                 </Col>

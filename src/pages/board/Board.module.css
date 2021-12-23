@@ -5,3 +5,14 @@
     margin-left: 10% ;
     margin-right: 10%;
 }
+.Btn{
+    background-color: #ffcc66;
+    color: white;
+    font-size: 20px;
+    padding: 8px 40px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    border: none;
+    margin-left:47%;
+}

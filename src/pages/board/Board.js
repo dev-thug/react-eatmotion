@@ -35,7 +35,7 @@ const Board = () => {
     return (
         <div className={classes.boardborder}>
             <PostList content={loadedPosts}/>
-            <Link to="post-write">글쓰기</Link>
+            <Link to="post-write"><button className={classes.Btn}>글쓰기</button></Link>
         </div>
     )
 }

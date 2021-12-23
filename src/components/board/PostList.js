@@ -27,12 +27,12 @@ const PostList = (props) => {
                 )}
 
             </ul> */}
-      <div className="content">
+      <div>
         <Row>
           <Col xs={12}>
-            <Card>
+            <Card className={classes.content}>
               <CardHeader>
-                <CardTitle tag="h4">문의 사항</CardTitle>
+                <CardTitle tag="h3" className={classes.cardtitle}>문의 사항</CardTitle>
               </CardHeader>
               <CardBody>
                 <Table responsive>
