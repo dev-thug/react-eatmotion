@@ -7,3 +7,25 @@
 .shop-item:hover{
     background-color:whitesmoke;
 }
+.name{
+    font-weight: bold;
+}
+.grade{
+ font-size:smaller;
+ color: #FFCC66;
+}
+.address{
+    color: darkgray;
+    font-size: smaller;
+    margin-bottom: 20px;
+}
+.line{
+    padding-top: 1px;
+    width:100%;
+    background:lightgray; 
+    margin-bottom: 10px;
+}
+.button{
+    margin-top:20px;
+    float:right;
+}
