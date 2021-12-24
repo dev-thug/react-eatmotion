@@ -17,6 +17,8 @@
 }
 .grade{
     float:right;
+    color:#ff8a66bd;
+    font-weight: bold;
 }
 .date{
     font-size:5px;
