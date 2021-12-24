@@ -42,7 +42,11 @@ const ShopInfo = ({match}) => {
         image = "https://sat02pap001files.storage.live.com/y4muBNjjLV1S3srkmpKb_LXzKnCSonTbnAqrMUmLicnPpJtp2FaVZMEPQikOt4o0U6BJPdi5SEMOVbhQ0-EsdH13YLInGXS25HSR0APXAJMQFS4zJd1LraGsvEQMcnIfer0zU-H-21rPgEstrNYxArRZiGxt6e_pyAjkVTCvBKGuxBENQMQkTxpPva1-cMUgDdR7gdCI8cW-jaGJRFCRRChOw/%ED%95%9C%EC%8B%9D.jpg?psid=1&width=1087&height=815"
     }else if(loadedShop.foodClassific === "패스트푸드"){
         image = "https://sat02pap001files.storage.live.com/y4mzspFMZ1zyhTrrY2JEShm9V9Q8R2yzrfeMaLiOw0rc0rl11M9XdaKDyAPAeeaqT8JFMCUMkVgwS8PF3ghgzgF6O1CjRhG06ameXLBwmyspi5X13YbxCdgdEAzLMkQlRpBP4IV_ARGHqTzFRzXgzOtTqzA61yjA-ebRL-pGHMlF7RyqxNSheQqB-mPmJ_GmHKKGjCAt6L6qYwBe31ABJbf3A/%ED%8C%A8%EC%8A%A4%ED%8A%B8%ED%91%B8%EB%93%9C.jpg?psid=1&width=1087&height=815"
+    }else if(loadedShop.foodClassific === "호프(소주방)"){
+        image = "https://sat02pap001files.storage.live.com/y4m326YYnCVrrZasi-IZFT6jgkdOIL8nIDhicEi1Z5dSKBqOTTUOPhS5O4RCNNsgiDTlqfOp8jalqGOKam62ZqbIZ7PtzjCQOrreIF5eMcZZkIm0ZwuGy_ZuTMhpzcSIYiMb9Yd1hH4OYSBeZYAdTZdC3ADz0xpI1gc0CvGdd7jusHZlrHVW9Jm_4OtUvcsDIJZEgy4MxnLot8U-H0k40CAWQ/%ED%98%B8%ED%94%84(%EC%86%8C%EC%A3%BC%EB%B0%A9).jpeg?psid=1&width=1040&height=585"
     }
+
+
 
     if (isLoading) {
         return (
