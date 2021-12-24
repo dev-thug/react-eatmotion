@@ -1,6 +1,7 @@
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import classes from './SimpleSlider.module.css'
 const SimpleSlider = () => {
     const settings = {
         dots: true,
@@ -29,14 +30,13 @@ const SimpleSlider = () => {
             <br></br>
             <Slider {...settings}>
                 <div>
-
-                    <img src={IMAGE[0].src} alt=""/>
+                    <img className={classes.banner} src={IMAGE[0].src} alt=""/>
                 </div>
                 <div>
-                    <img src={IMAGE[1].src} alt=""/>
+                    <img className={classes.banner} src={IMAGE[1].src} alt=""/>
                 </div>
                 <div>
-                    <img src={IMAGE[2].src} alt=""/>
+                    <img className={classes.banner} src={IMAGE[2].src} alt=""/>
                 </div>
             </Slider>
         </div>
