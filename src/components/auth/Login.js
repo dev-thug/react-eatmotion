@@ -52,7 +52,6 @@ const Login = () => {
       .then((data) => {
         authCtx.login(data.authToken);
         history.replace("/");
-        alert("로그인 성공")
         console.log(data);
       }).catch(data=>{
       alert("로그인 실패")
