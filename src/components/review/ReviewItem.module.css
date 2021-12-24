@@ -1,0 +1,24 @@
+.reviewlist{
+    width:100%;
+    height:100%;
+    background:#ffcc663d;
+    border-radius: 5px;
+    padding:20px;
+    margin-bottom: 15px;
+}
+.head{
+    width:100%;
+    height:50px;
+}
+.username{
+    font-weight: bold;
+    color:#ffcc66;
+    float:left;
+}
+.grade{
+    float:right;
+}
+.date{
+    font-size:5px;
+    color:darkgray;
+}

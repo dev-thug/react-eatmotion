@@ -45,14 +45,19 @@ const Login = () => {
         } else {
           res.json().then((data) => {
             console.log(data);
+            throw data;
           });
         }
       })
       .then((data) => {
         authCtx.login(data.authToken);
         history.replace("/");
+        alert("로그인 성공")
         console.log(data);
-      });
+      }).catch(data=>{
+      alert("로그인 실패")
+    })
+
   };
 
   return (
@@ -60,7 +65,7 @@ const Login = () => {
       <form onSubmit={submitHandler} className={classes.form}>
         <p className={classes.e}>Eatmotion</p>
         <br></br>
-        <input type="text" placeholder="아이디" ref={emailInputRef} />
+        <input type="email" placeholder="이메일" ref={emailInputRef} />
         <input type="password" placeholder="비밀번호" ref={passwordInputRef} />
         <button>로그인</button>
         <p className={classes.message}>

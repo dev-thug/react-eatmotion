@@ -1,6 +1,7 @@
 import {useContext, useRef} from "react";
 import {useHistory} from "react-router-dom";
 import AuthContext from "../../store/auth-context";
+import classes from "./NewReviewForm.module.css"
 
 const NewReviewForm = (props) => {
 
@@ -43,9 +44,8 @@ const NewReviewForm = (props) => {
     return (
         <div>
             <form onSubmit={submitHandler}>
-                리뷰 작성
-                <input type="text" ref={contentInputRef}/>
-                <button>작성</button>
+                <textarea className={classes.textbox} rows="3" placeholder="리뷰를 작성해주세요" ref={contentInputRef}/>
+                <button className={classes.reviewbtn}>리뷰 작성</button>
             </form>
 
         </div>

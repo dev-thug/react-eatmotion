@@ -1,6 +1,7 @@
 import {useContext, useEffect, useState} from "react";
 import AuthContext from "../../store/auth-context";
 import ReserveList from "../../components/reserve/ReserveList";
+import Loading from "../../components/ui/Loading";
 
 const Reserve = () => {
     const authCtx = useContext(AuthContext);
@@ -33,7 +34,7 @@ const Reserve = () => {
     if (isLoading) {
         return (
             <section>
-                <p>Loading...</p>
+                <Loading/>
             </section>
         )
     }
