@@ -13,6 +13,17 @@
     border-radius: 5px;
     margin: 10px 0px;
     cursor: pointer;
-    border: none;
+    border: 2px solid #ffcc66;
+    margin-right: 130px;
+}
+.Btn:hover{
+    background-color: #fff;
+    color: #ffcc66;
+    font-size: 20px;
+    padding: 8px 40px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    border: 2px solid #ffcc66;
     margin-right: 130px;
 }
