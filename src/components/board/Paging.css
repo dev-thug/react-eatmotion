@@ -13,7 +13,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
-    border: 1px solid #e2e2e2;
+    border: 1px solid #ffcc6669;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,7 @@
   
   ul.pagination li a {
     text-decoration: none;
-    color: #337ab7;
+    color: #ffcc66;
     font-size: 1rem;
   }
   
@@ -39,17 +39,17 @@
   }
 
   ul.pagination li.active {
-    background-color: #337ab7;
+    background-color: #ffcc66;
   }
   
   ul.pagination li a:hover,
   ul.pagination li a.active {
-    color: blue;
+    color: #ffcc66;
   }
   
   .page-selection {
     width: 48px;
     height: 30px;
-    color: #337ab7;
+    color: #ffcc66;
   }
 
