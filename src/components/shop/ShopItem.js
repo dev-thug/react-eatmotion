@@ -36,14 +36,16 @@ function ShopItem(props) {
             <Row>
                 {/* <p>{props.id}</p> */}
                 <Col md="9" onClick={clickHandler}>
-                    <strong>{props.name}</strong>
-                    <p>{props.address}</p>
-                    <p>평점 {Math.round(props.grade)}</p>
+                    <div className={classes.line}></div>
+                    <div className={classes.grade}>평점 {Math.round(props.grade)}</div>
+                    <div className={classes.name}>{props.name}</div>
+                    <div className={classes.address}>{props.address}</div>
+                    
                 </Col>
                 <Col md="3">
                     {/* <a href="/reserve-make">예약&nbsp;&nbsp;&nbsp;</a> */}
                     {isLoggedIn && (
-                        <Link to={url}><Button color="warning">예약&nbsp;&nbsp;&nbsp;</Button></Link>
+                        <Link to={url}><Button className={classes.button} color="warning">예약&nbsp;&nbsp;&nbsp;</Button></Link>
                     )}
                 </Col>
             </Row>
