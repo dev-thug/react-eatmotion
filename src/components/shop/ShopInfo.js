@@ -57,7 +57,7 @@ const ShopInfo = ({match}) => {
             <Link to="/shop">
                 <button className={classes.backbtn}>지도로 돌아가기</button>
             </Link>
-            <div className={classes.shopimage}><img src={image} alt="음식점 이미지 여기"/></div>
+            <div><img src={image} alt="음식점 이미지 여기" className={classes.shopimage}/></div>
             <div className={classes.shopinfohead}>
                 <div className={classes.nametype}>
                     <h2 className={classes.shopname}>{loadedShop.name}</h2>
