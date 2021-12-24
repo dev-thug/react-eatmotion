@@ -18,6 +18,7 @@ import NewReserve from "./components/reserve/NewReserve";
 import Reserve from "./pages/reserve/Reserve";
 import NewReviewForm from "./components/review/NewReviewForm";
 import ShopInfo from "./components/shop/ShopInfo";
+import Loading from "./components/ui/Loading";
 
 
 function App() {
@@ -55,6 +56,9 @@ function App() {
 
                 <Route path="/reserve">
                     <Reserve/>
+                </Route>
+                <Route path="/test">
+                    <Loading/>
                 </Route>
                 <Route path="*">
                     <Redirect to="/"/>

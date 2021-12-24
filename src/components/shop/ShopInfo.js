@@ -3,6 +3,8 @@ import ShopItem from "./ShopItem";
 import ReviewList from "../review/ReviewList";
 import {Link} from "react-router-dom";
 import NewReviewForm from "../review/NewReviewForm";
+import classes from "./ShopInfo.module.css"
+import Loading from "../ui/Loading";
 
 const ShopInfo = ({match}) => {
 
@@ -35,24 +37,44 @@ const ShopInfo = ({match}) => {
             })
     }, []);
 
+    let image = ""
+    if (loadedShop.foodClassific === "한식") {
+        image = "https://sat02pap001files.storage.live.com/y4muBNjjLV1S3srkmpKb_LXzKnCSonTbnAqrMUmLicnPpJtp2FaVZMEPQikOt4o0U6BJPdi5SEMOVbhQ0-EsdH13YLInGXS25HSR0APXAJMQFS4zJd1LraGsvEQMcnIfer0zU-H-21rPgEstrNYxArRZiGxt6e_pyAjkVTCvBKGuxBENQMQkTxpPva1-cMUgDdR7gdCI8cW-jaGJRFCRRChOw/%ED%95%9C%EC%8B%9D.jpg?psid=1&width=1087&height=815"
+    }else if(loadedShop.foodClassific === "패스트푸드"){
+        image = "https://sat02pap001files.storage.live.com/y4mzspFMZ1zyhTrrY2JEShm9V9Q8R2yzrfeMaLiOw0rc0rl11M9XdaKDyAPAeeaqT8JFMCUMkVgwS8PF3ghgzgF6O1CjRhG06ameXLBwmyspi5X13YbxCdgdEAzLMkQlRpBP4IV_ARGHqTzFRzXgzOtTqzA61yjA-ebRL-pGHMlF7RyqxNSheQqB-mPmJ_GmHKKGjCAt6L6qYwBe31ABJbf3A/%ED%8C%A8%EC%8A%A4%ED%8A%B8%ED%91%B8%EB%93%9C.jpg?psid=1&width=1087&height=815"
+    }
 
     if (isLoading) {
         return (
             <section>
-                <p>Loading...</p>
+                <Loading/>
             </section>
         )
     }
 
     return (
-        <div>
-            <div>음식점 정보</div>
-            <p>음식점 명 : {loadedShop.name}</p>
-            <p>음식점 주소 : {loadedShop.address}</p>
-            <p>음식점 분류 : {loadedShop.foodClassific}</p>
-            <ReviewList reviews={loadedReviews}></ReviewList>
-            <Link to="/shop"><button>뒤로가기</button></Link>
+        <div className={classes.shopinfo}>
+            <Link to="/shop">
+                <button className={classes.backbtn}>지도로 돌아가기</button>
+            </Link>
+            <div className={classes.shopimage}><img src={image} alt="음식점 이미지 여기"/></div>
+            <div className={classes.shopinfohead}>
+                <div className={classes.nametype}>
+                    <h2 className={classes.shopname}>{loadedShop.name}</h2>
+                    <div className={classes.classification}>{loadedShop.foodClassific}</div>
+                </div>
+                <h1 className={classes.rate}>{Math.round(loadedShop.grade)}</h1>
+            </div>
+            <br></br>
+            <div className={classes.line}></div>
+            <div className={classes.location}>찾아오는 길</div>
+            <div className={classes.address}>{loadedShop.address}</div>
+            <div className={classes.line}></div>
             <NewReviewForm id={loadedShop.id}></NewReviewForm>
+            <div className={classes.line}></div>
+            <h4 className={classes.reviewhead}>리뷰 보기</h4>
+            <ReviewList reviews={loadedReviews}></ReviewList>
+
         </div>
     )
 }

@@ -12,6 +12,7 @@ const Footer = () => {
 		</div>
 		<div className={classes.footer_bottom_div}>Eatmotion 2021 APP | Project of 맛집을 구해조</div>
 	</footer>
+            
     )
 
 }

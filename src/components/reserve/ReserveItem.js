@@ -8,7 +8,7 @@ const ReserveItem = (props) => {
     return (
         <div className={classes.listDiv}>
             <p className={classes.shopName}>{props.shopName} </p>
-            <p>평점 : {props.shopGrade}</p>
+            <p>평점 : {Math.round(props.shopGrade)}</p>
             <p>예약 번호 : {props.id}</p>
             <p>예약 인원 : {props.reserveNumberOfPeople}</p>
             <p>예약 일정 : {props.reserveDateTime}</p>

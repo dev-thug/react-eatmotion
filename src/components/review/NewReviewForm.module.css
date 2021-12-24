@@ -1,0 +1,21 @@
+.textbox{
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #FFCC66;
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.reviewbtn{
+    background-color:#ffcc66;
+    color: white;
+    font-size: 15px;
+    padding: 8px 40px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    cursor: pointer;
+    border: none;
+    width:100%;
+}

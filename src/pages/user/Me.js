@@ -2,6 +2,7 @@ import {useContext, useEffect, useState} from "react";
 import AuthContext from "../../store/auth-context";
 import UserInfo from "../../components/user/UserInfo";
 import classes from "./Me.module.css"
+import Loading from "../../components/ui/Loading";
 
 
 const Me = () => {
@@ -37,7 +38,7 @@ const Me = () => {
     if (isLoading) {
         return (
             <section>
-                <p>Loading...</p>
+                <Loading/>
             </section>
         )
     }

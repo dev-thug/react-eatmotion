@@ -6,6 +6,7 @@ import {
     Col,
 } from "reactstrap";
 import ShopMap from "../../components/shop/ShopMap";
+import Loading from "../../components/ui/Loading";
 
 
 // core components
@@ -32,7 +33,8 @@ const Shop = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [loadedShops, setLoadedShops] = useState([]);
 
-
+    const [x, setLatitude] = useState(0)
+    const [y, setLongitude] = useState(0)
     useEffect(() => {
 
 
@@ -53,6 +55,8 @@ const Shop = () => {
                 console.log(data);
                 setIsLoading(false);
                 setLoadedShops(data);
+                setLatitude(latitude)
+                setLongitude(longitude)
 
             });
 
@@ -61,7 +65,7 @@ const Shop = () => {
     if (isLoading) {
         return (
             <section>
-                <p>Loading...</p>
+              <Loading/>
             </section>
         );
     }
@@ -79,7 +83,7 @@ const Shop = () => {
                                     <ShopList shops={loadedShops}/>
                                 </Col>
                                 <Col md="8">
-                                    <ShopMap shops={loadedShops}/>
+                                    <ShopMap shops={loadedShops} x={latitude} y={longitude}/>
                                 </Col>
                             </Row>
                         </Card>
