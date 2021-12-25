@@ -8,14 +8,6 @@ import {
 import ShopMap from "../../components/shop/ShopMap";
 import Loading from "../../components/ui/Loading";
 
-
-// core components
-// import PanelHeader from "components/PanelHeader/PanelHeader.js";
-// import { thead, tbody } from "variables/general";
-
-// const [latitude, setLatitude] = useState(0);
-// const [longitude, setLongitude] = useState(0);
-
 let latitude = 0;
 let longitude = 0;
 console.log(latitude, longitude)
