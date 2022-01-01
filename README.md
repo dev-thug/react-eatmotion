@@ -1,3 +1,9 @@
+# eatmotion
+
+## 배포
+- [서버 API](https://hayagou.shop/api/swagger-ui.html)
+- [프론트 웹](https://hayagou.shop)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
